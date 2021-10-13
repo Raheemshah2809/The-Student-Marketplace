@@ -1,145 +1,134 @@
-*,
-:before,
-:after {
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai&display=swap');
+
+* {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100vh;
 }
 
 body {
+    background-color: black;
+    font-family: Roboto, Arial, sans-serif;
     display: flex;
     align-items: center;
-    background: black;
-    min-width: 275px;
-    height: 100vh;
-    margin: 0 10vw;
-    overflow: hidden;
-    color: #138ff2;
-    font-family: Roboto;
+    justify-content: center;
 }
 
-.wrapper {
-    flex-grow: 2;
-    width: 40vw;
-    max-width: 500px;
-    margin: 0 auto;
-    color: yellow;
+section {
+    /*height: 150px;
+  width: 200px;
+  padding: 5px;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-h1 {
-    margin: 0;
-    font-size: 6em;
-    font-weight: 100;
+.preloader {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    width: 60px;
+    height: 60px;
 }
 
-p {
-    width: 95%;
-    font-size: 1.5em;
-    line-height: 1.4;
+.preloader div {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background: #4A676A;
+    border-radius: 3px;
 }
 
-.buttons {
-    white-space: nowrap;
-    display: inline-block;
+.preloader div:nth-child(1) {
+    animation: squad1 3s steps(1) infinite .2s;
 }
 
-span {
-    display: block;
-    text-transform: uppercase;
-    color: #b9ddfb;
-    letter-spacing: 1.5px;
-    text-align: center;
+.preloader div:nth-child(2) {
+    animation: squad2 3s steps(1) infinite;
 }
 
-a {
-    display: inline-block;
-    padding: 0.8em 1em;
-    margin-right: 1em;
-    margin-bottom: 1em;
-    border: 3px solid #b9ddfb;
-    color: yellow;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: 0.2em;
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s;
+.preloader div:nth-child(3) {
+    animation: squad3 3s steps(1) infinite .4s;
 }
 
-a:hover {
-    color: #e3f2fd;
-}
+@keyframes squad2 {
 
-a:hover:before {
-    top: 0;
-}
+    0%,
+    100% {
+        transform: translateY(0);
+    }
 
-a:before {
-    content: "";
-    background: yellow;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: -100%;
-    left: 0;
-    transition: 0.3s;
-    z-index: -1;
-}
+    25% {
+        transform: translateY(35px);
+    }
 
-.space {
-    width: 75px;
-    height: calc(50vh + 37.5px);
-    border-top-left-radius: 37.5px;
-    border-top-right-radius: 37.5px;
-    overflow: hidden;
-    margin: calc(50vh - 37.5px) auto 0 auto;
-    position: relative;
-    pointer-events: none;
-    -webkit-transform: translateZ(0);
-}
+    50% {
+        transform: translate(-35px, 35px);
+    }
 
-.blackhole {
-    border: 5px solid yellow;
-    height: 75px;
-    width: 75px;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.blackhole:after {
-    content: "";
-    height: calc(100% + 10px);
-    width: calc(100% + 10px);
-    border: 5px solid yellow;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    z-index: 5;
-    transform: rotate(45deg);
-}
-
-.ship {
-    height: 150px;
-    width: 55px;
-    margin-left: 10px;
-    background: url("https://cbwconline.com/IMG/Codepen/Space%20Ship.svg") center/contain no-repeat;
-    animation: blackhole 4s infinite linear;
-    position: absolute;
-    bottom: -150px;
-}
-
-@keyframes blackhole {
-    to {
-        transform: translateY(-100vh);
+    75% {
+        transform: translateX(-35px);
     }
 }
 
-@media (max-width: 600px) {
-    body {
-        margin: 0 5vw;
+@keyframes squad1 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateX(35px);
+    }
+
+    50% {
+        transform: translate(35px, 35px);
+    }
+
+    75% {
+        transform: translateY(35px);
     }
 }
+
+@keyframes squad3 {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-35px);
+    }
+
+    50% {
+        transform: translate(35px, -35px);
+    }
+
+    75% {
+        transform: translateX(35px);
+    }
+}
+
+/*-----------------------*/
+#by {
+    font-family: 'Arima Madurai', cursive;
+    color: white;
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+/*
+light-blue: #C1D0D0;
+dark-blue: #4A676A;
+cream: #FFEAA5;
+yellow: #FFB037;
+*/
