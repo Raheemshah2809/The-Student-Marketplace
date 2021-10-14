@@ -424,7 +424,7 @@ a {
 
 .header {
 	height: 100vh;
-	background: linear-gradient(to left bottom, rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.8)), url();
+	background: linear-gradient(to left bottom, rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.8)), url(../img/backdrop1.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: bottom center;
