@@ -1,0 +1,92 @@
+@media (max-width: 768px) {
+	// NAVIGATION
+	.nav {
+		display: none;
+		background-color: $color-white;
+		&__list {
+			flex-direction: column;
+		}
+
+		&__logo {
+			order: 1;
+			padding: 1rem;
+		}
+
+		&__items {
+			order: 2;
+			padding: 1rem;
+
+			& a {
+				color: $color-secondary;
+				padding: 1rem;
+			}
+		}
+	}
+
+	// HEADER
+	.header {
+		margin-top: 0;
+
+		&__text {
+			margin-top: 15rem;
+		}
+
+		&__title {
+			&--primary {
+				font-size: 8rem;
+				line-height: 8rem;
+
+				&:hover {
+					transform: none;
+				}
+			}
+
+			&--secondary {
+				font-size: 4rem;
+			}
+		}
+	}
+
+	// FOOD CARDS
+	.food__card {
+		background: $color-primary;
+		box-shadow: $shadow-card;
+		transition: none !important;
+
+		h3 {
+			color: $color-white;
+		}
+
+		p {
+			color: $color-white;
+		}
+
+		&:hover {
+			transform: none;
+
+			img {
+				transform: none;
+			}
+		}
+	}
+
+	.special--long {
+		font-size: 3.2rem !important;
+		line-height: 4rem !important;
+	}
+
+	.time-box {
+		margin-bottom: 4rem !important;
+	}
+
+	// FOOTER
+	.contact {
+		text-align: center;
+		padding-bottom: 4rem;
+		border-bottom: 2px solid $color-primary;
+	}
+
+	.copyright {
+		padding: 1rem;
+	}
+}

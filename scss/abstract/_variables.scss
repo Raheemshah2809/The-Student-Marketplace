@@ -1,0 +1,32 @@
+// COLOR
+$color-primary: #e4091d;
+$color-primary-light: #ff2b3f;
+$color-secondary: #261c13;
+$color-white: #f8fffd;
+$color-black: #111111;
+$color-grey-light: #c0c0c0;
+$color-grey-dark: #444;
+
+// GRADIENTS
+$gradient-blue: linear-gradient(
+	120deg,
+	#050fed,
+	#1039db,
+	#1759ea,
+	#030580,
+	#190567
+);
+
+// SHADOWS
+$shadow-primary: 0 0.7rem 0 $color-primary;
+$shadow-nav: 0 0.3rem 2rem rgba($color-black, 0.3);
+$shadow-btn-hover: 0 1rem 2rem rgba($color-black, 0.2);
+$shadow-btn-active: 0 0.5rem 1rem rgba($color-black, 0.7);
+$shadow-text: 0 0.3rem 0.5rem rgba($color-white, 0.6);
+$shadow-card: 0 1rem 4rem rgba($color-black, 0.5);
+
+// FONT
+$header-1: 'Gotham', Helvetica, Arial, sans-serif;
+$header-2: 'Futura', 'Helvetica Neue', Helvetica, Arial;
+$content-1: 'Gotham', Helvetica, Arial, sans-serif;
+$content-2: 'Futura', 'Helvetica Neue', Helvetica, Arial;
