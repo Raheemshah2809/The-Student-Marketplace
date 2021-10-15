@@ -10,8 +10,8 @@ body {
 	box-sizing: border-box;
 	font-size: 1.6rem;
 	background-color: #f8fffd;
-	border-left: 1.5rem solid teal;
-	border-right: 1.5rem solid teal;
+	border-left: 1.5rem solid maroon;
+	border-right: 1.5rem solid maroon;
 }
 
 ul {
@@ -71,7 +71,7 @@ a {
 	line-height: 6rem;
 	text-transform: none;
 	margin-bottom: 4rem;
-	color: teal;;
+	color: maroon;;;;
 	text-transform: uppercase;
 	text-align: center
 }
@@ -85,7 +85,7 @@ a {
 	line-height: 6rem;
 	text-transform: none;
 	margin-bottom: 4rem;
-	color: teal;;
+	color: maroon;;;;
 	text-transform: uppercase;
 	text-align: center
 }
@@ -150,8 +150,8 @@ a {
 }
 
 .btn__primary:hover {
-	background-color: teal;;
-	border: 1px solid teal;
+	background-color: maroon;;;;
+	border: 1px solid maroon;;;
 }
 
 .food {
@@ -229,7 +229,7 @@ a {
 
 .food__card:hover {
 	transform: translateY(-1rem) scale(0.95);
-	background: teal;;
+	background: maroon;;;;
 	box-shadow: 0 1rem 4rem rgba(17, 17, 17, 0.5)
 }
 
@@ -295,7 +295,7 @@ a {
 	font-family: "Gotham", Helvetica, Arial, sans-serif;
 	font-weight: 100;
 	font-size: 2rem;
-	color: teal;
+	color: maroon;;;
 }
 
 .box__link {
@@ -306,7 +306,7 @@ a {
 }
 
 .box .icon {
-	color: teal;;
+	color: maroon;;;;
 	margin-bottom: 3rem
 }
 
@@ -344,7 +344,7 @@ a {
 }
 
 .person {
-	color: teal;;
+	color: maroon;;;;
 	font-family: "Futura", "Helvetica Neue", Helvetica, Arial;
 	font-size: 2rem
 }
@@ -383,13 +383,13 @@ a {
 }
 
 .contact__adress {
-	color: teal;;
+	color: maroon;;;;
 	font-family: "Gotham", Helvetica, Arial, sans-serif;
 	margin-bottom: 2rem
 }
 
 .contact__email {
-	color: teal;;
+	color: maroon;;;;
 	font-family: "Gotham", Helvetica, Arial, sans-serif;
 	margin-bottom: 2rem
 }
@@ -413,13 +413,13 @@ a {
 
 .copyright__links a {
 	font-family: "Gotham", Helvetica, Arial, sans-serif;
-	color: teal;
+	color: maroon;;;
 	position: relative;
     left: 70px;
 }
 
 .copy {
-	color: teal;
+	color: maroon;;;
 }
 
 .header {
@@ -448,7 +448,7 @@ a {
 	line-height: 10rem;
 	text-transform: uppercase;
 	color: #f8fffd;
-	text-shadow: 0 0.7rem 0 teal;
+	text-shadow: 0 0.7rem 0 maroon;;;
 	transition: 0.2s all;
 	display: block;
 	margin-bottom: 3rem
@@ -501,7 +501,7 @@ a {
 
 .nav__items:hover::after {
 	width: 100%;
-	background: teal
+	background: maroon;;
 }
 
 .nav__items a {
@@ -515,7 +515,7 @@ a {
 }
 
 .nav__items a:hover {
-	color: teal;
+	color: maroon;;;
 }
 
 .nav__scrolled {
@@ -574,7 +574,7 @@ a {
 	}
 
 	.food__card {
-		background: teal;;
+		background: maroon;;;;
 		box-shadow: 0 1rem 4rem rgba(17, 17, 17, 0.5);
 		transition: none !important
 	}
@@ -607,7 +607,7 @@ a {
 	.contact {
 		text-align: center;
 		padding-bottom: 4rem;
-		border-bottom: 2px solid teal;
+		border-bottom: 2px solid maroon;;;
 	}
 
 	.copyright {
@@ -633,7 +633,7 @@ a {
 
 .section-review {
 	padding: 30rem 0;
-	background-color: teal;
+	background-color: maroon;;;
 }
 
 .section-order {
