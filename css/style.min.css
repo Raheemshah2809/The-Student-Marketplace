@@ -441,17 +441,17 @@ a {
 
 .header__title--primary {
 	font-family: "Gotham", Helvetica, Arial, sans-serif;
-	font-size: 11rem;
+	font-size: 10rem;
 	font-style: normal;
 	font-weight: 700;
 	letter-spacing: normal;
 	line-height: 10rem;
 	text-transform: uppercase;
 	color: #f8fffd;
-	text-shadow: 0 0.7rem 0 teal;;;
+	text-shadow: 0 0.7rem 0 teal;
 	transition: 0.2s all;
 	display: block;
-	margin-bottom: 3rem
+	margin-bottom: 3rem;
 }
 
 .header__title--primary:hover {
