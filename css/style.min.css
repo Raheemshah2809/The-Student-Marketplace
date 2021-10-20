@@ -71,12 +71,12 @@ a {
 	line-height: 6rem;
 	text-transform: none;
 	margin-bottom: 4rem;
-	color: teal;;;;
+	color: teal;
 	text-transform: uppercase;
 	text-align: center
 }
 
-.type__title1{
+.type__title1 {
 	font-family: "Futura", "Helvetica Neue", Helvetica, Arial;
 	font-size: 2rem;
 	font-style: italic;
@@ -85,7 +85,7 @@ a {
 	line-height: 6rem;
 	text-transform: none;
 	margin-bottom: 4rem;
-	color: teal;;;;
+	color: teal;
 	text-transform: uppercase;
 	text-align: center
 }
@@ -146,12 +146,12 @@ a {
 	border: 1px solid black;
 	position: relative;
 	bottom: 25px;
-	
+
 }
 
 .btn__primary:hover {
-	background-color: teal;;;;
-	border: 1px solid teal;;;
+	background-color: teal;
+	border: 1px solid teal;
 }
 
 .food {
@@ -181,7 +181,7 @@ a {
 	transition: 1s all
 }
 
-.food__img1{
+.food__img1 {
 	width: 102px;
 	padding: 1rem;
 	margin-top: -5rem;
@@ -229,7 +229,7 @@ a {
 
 .food__card:hover {
 	transform: translateY(-1rem) scale(0.95);
-	background: teal;;;;
+	background: teal;
 	box-shadow: 0 1rem 4rem rgba(17, 17, 17, 0.5)
 }
 
@@ -269,7 +269,17 @@ a {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
-	transition: all 1s
+	transition: all 1s;
+	cursor: pointer;
+}
+
+.box a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-decoration: none;
+	color: teal;
 }
 
 .box:hover {
@@ -295,18 +305,18 @@ a {
 	font-family: "Gotham", Helvetica, Arial, sans-serif;
 	font-weight: 100;
 	font-size: 2rem;
-	color: teal;;;
+	color: teal;
 }
 
 .box__link {
-	color: #111;
+	color: teal;
 	font-size: 2rem;
 	font-family: "Futura", "Helvetica Neue", Helvetica, Arial;
 	font-weight: 900
 }
 
 .box .icon {
-	color: teal;;;;
+	color: teal;
 	margin-bottom: 3rem
 }
 
@@ -344,13 +354,13 @@ a {
 }
 
 .person {
-	color: teal;;;;
+	color: teal;
 	font-family: "Futura", "Helvetica Neue", Helvetica, Arial;
 	font-size: 2rem
 }
 
 .footer {
-	background-color: #171717 ;
+	background-color: #171717;
 	padding: 0 0 4rem
 }
 
@@ -383,13 +393,13 @@ a {
 }
 
 .contact__adress {
-	color: teal;;;;
+	color: teal;
 	font-family: "Gotham", Helvetica, Arial, sans-serif;
 	margin-bottom: 2rem
 }
 
 .contact__email {
-	color: teal;;;;
+	color: teal;
 	font-family: "Gotham", Helvetica, Arial, sans-serif;
 	margin-bottom: 2rem
 }
@@ -413,13 +423,13 @@ a {
 
 .copyright__links a {
 	font-family: "Gotham", Helvetica, Arial, sans-serif;
-	color: teal;;;
+	color: teal;
 	position: relative;
-    left: 70px;
+	left: 70px;
 }
 
 .copy {
-	color: teal;;;
+	color: teal;
 }
 
 .header {
@@ -501,7 +511,8 @@ a {
 
 .nav__items:hover::after {
 	width: 100%;
-	background: teal;;
+	background: teal;
+	;
 }
 
 .nav__items a {
@@ -515,7 +526,7 @@ a {
 }
 
 .nav__items a:hover {
-	color: teal;;;
+	color: teal;
 }
 
 .nav__scrolled {
@@ -574,7 +585,7 @@ a {
 	}
 
 	.food__card {
-		background: teal;;;;
+		background: teal;
 		box-shadow: 0 1rem 4rem rgba(17, 17, 17, 0.5);
 		transition: none !important
 	}
@@ -607,7 +618,7 @@ a {
 	.contact {
 		text-align: center;
 		padding-bottom: 4rem;
-		border-bottom: 2px solid teal;;;
+		border-bottom: 2px solid teal;
 	}
 
 	.copyright {
@@ -624,7 +635,7 @@ a {
 		bottom: 25px;
 	}
 
-	
+
 }
 
 .section-menu {
@@ -633,7 +644,7 @@ a {
 
 .section-review {
 	padding: 30rem 0;
-	background-color: teal;;;
+	background-color: teal;
 }
 
 .section-order {
