@@ -1,0 +1,27 @@
+{
+  "name": "The-Student-Marketplace",
+  "version": "0.1.4",
+  "description": "A minimal Electron application",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "win": {
+    "icon": "build/home.png"
+  },
+  "repository": "https://github.com/electron/electron-quick-start",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "Raheem Shah",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^15.2.0",
+    "electron-builder": "^22.13.1"
+  },
+  "dependencies": {}
+}
