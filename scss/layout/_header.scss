@@ -1,0 +1,37 @@
+.header {
+	height: 100vh;
+	background: linear-gradient(to left bottom, rgba($color-black, 0.5), rgba($color-black, 0.8)), url(../img/bg2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: bottom center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: -12rem;
+
+	&__text {
+		text-align: center;
+		margin-top: 35rem;
+	}
+
+	&__title {
+		&--primary {
+			@include header-1;
+			color: $color-white;
+			text-shadow: $shadow-primary;
+			transition: 0.2s all;
+			display: block;
+			margin-bottom: 3rem;
+
+			&:hover {
+				transform: skewY(-2deg) skewX(-15deg) scale(1.1);
+			}
+		}
+
+		&--secondary {
+			@include header-2;
+			color: $color-white;
+			text-shadow: 0 1rem 4rem rgba($color-black, 0.9);
+		}
+	}
+}

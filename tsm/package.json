@@ -1,0 +1,22 @@
+{
+  "name": "TSM",
+  "version": "1.4.55",
+  "description": "Built By A Student For The Students",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/Raheemshah2809/The-Student-Marketplace/tree/Dev",
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo"
+  ],
+  "author": "GitHub",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^15.2.0"
+  }
+}
