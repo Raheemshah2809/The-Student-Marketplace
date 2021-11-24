@@ -451,7 +451,7 @@ a {
 
 .header__title--primary {
 	font-family: "Gotham", Helvetica, Arial, sans-serif;
-	font-size: 10rem;
+	font-size: 8rem;
 	font-style: normal;
 	font-weight: 700;
 	letter-spacing: normal;
@@ -656,5 +656,37 @@ a {
 	max-width: 175rem;
 	margin: 0 auto
 }
+
+.notify {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 0;
+	box-sizing: border-box;
+	color: white;
+	text-align: center;
+	background: #03bf6d;
+	overflow: hidden;
+	box-sizing: border-box;
+	-webkit-transition: all ease 0.4s;
+	-moz-transition: all ease 0.4s;
+	-ms-transition: all ease 0.4s;
+	-o-transition: all ease 0.4s;
+	transition: all ease 0.4s;
+}
+
+#notifyType:before {
+	display: block;
+	margin-top: 15px;
+}
+
+.notify.active {
+	height: 50px;
+}
+
+.success:before {
+	content: "Saved - Publish your post for changes to take effect";
+}
+
 
 /*# sourceMappingURL=style.min.css.map */
