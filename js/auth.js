@@ -15,12 +15,9 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
 const signOut = () => {
-    firebase
+    firebase 
         .auth()
         .signOut()
-        .then(function () {
-            window.location.replace("index.html");
-        })
         .catch(function (error) {
             alert("error signing out, check network connection");
         });
@@ -32,7 +29,10 @@ const authenticate = (email, password) => {
     auth.signInWithEmailAndPassword(email, password);
     firebase
         .auth()
-        .signInWithEmailAndPassword(email, password)
+        .signInWithEmailAndPassword(email, password).
+        then(() => {
+            window.location.replace("startpage.html");
+        })
         .catch(function (error) {
             // Handle Errors here.
             var errorCode = error.code;
