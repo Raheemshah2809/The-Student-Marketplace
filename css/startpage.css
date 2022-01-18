@@ -1,3 +1,16 @@
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate 2s linear infinite;
+}
+
 /* Resets */
 hr {
     margin-left: 0;
@@ -7,7 +20,7 @@ hr {
 /* Jumbotron (hero) */
 .jumbotron {
     position: relative;
-    background: url(images/Backgroundforboot.jpeg) no-repeat bottom center/cover;
+    background: url(/images/Backgroundforboot.jpeg) no-repeat bottom center/cover;
 }
 
 .jumbotron:before {
