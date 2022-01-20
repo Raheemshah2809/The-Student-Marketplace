@@ -1,5 +1,3 @@
-
-
 const showRegistration = () => {
     document.querySelector("#registration-page").classList.remove("hide");
     document.querySelector("#login-page").classList.add("hide");
@@ -17,14 +15,14 @@ const verifyPassword = (email) => {
     auth
         .sendPasswordResetEmail(email)
         .then(function () {
-            alert(`password reset email sent to ${email}`);
-            signIn();
+            alert.setMessage(`Password Reset Email Has Been Sent To ${email} Please Check Your Email, please click close to redirect.`);
+            alert.onClose(signIn);
         })
         .catch(function (error) {
-            alert("invalid email or bad network connection");
-            signIn();
+            alert.setMessage("invalid email or bad network connection");
+            alert.onClose(signIn);
         });
-};
+};  
 
 const register = () => {
     const email = document.querySelector("#registration-email").value;
@@ -33,11 +31,11 @@ const register = () => {
     const isValidEmail = email.match(/^[\w!#$%&'*+\/=?^`{|}~-]+(?:\.[\w!#$%&'*+\/=?`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+(?:ac\.uk)$/);
     
     if (email.trim() == "") {
-        alert("Enter Email");
+        alert.setMessage("Enter an Email");
     } else if (!isValidEmail) {
-        alert("Enter A Valid ac.uk Email");
-    } else if (email != reemail) {
-        alert("emails do not match");
+        alert.setMessage("Enter A Valid Ac.Uk Email");
+    } else if (email != reemail) {  
+        alert.setMessage("Emails Do Not Match");
     } else {
         auth
             .createUserWithEmailAndPassword(email, "oiawsdioAJSDOQWIORJQWOIAWSFIOJ"). 
@@ -48,7 +46,7 @@ const register = () => {
                 // Handle Errors here.
                 var errorCode = error.code;
                 var errorMessage = error.message;
-                alert(errorMessage);
+                alert.setMessage(errorMessage);
                 // ...
             });
     }
@@ -59,9 +57,10 @@ const login = () => {
     const password = document.querySelector("#login-password").value.trim();
 
     if (email.trim() == "") {
-        alert("Enter Email");
+        alert.setMessage("Enter an email");
     } else if (password == "" || password.length < 7) {
-        alert("Enter Password");
+        // alert("Enter Password");
+        alert.setMessage("Enter a password");
     } else {
         authenticate(email, password);
     }
@@ -72,13 +71,12 @@ const forgotPassword = (email) => {
     auth
         .sendPasswordResetEmail(email)
         .then(function () {
-            alert("email sent");
+            alert.setMessage("email sent");
         })
         .catch(function (error) {
-            alert("invalid email or bad network connection");
+            alert.setMessage("invalid email or bad network connection");
         });
 };
-
 
 const showHomepage = () => {
     document.querySelector("#registration-page").classList.add("hide");
@@ -115,8 +113,20 @@ document.querySelector("#login-password").addEventListener("keyup", (e) => {
 document.querySelector("#forgot-password").addEventListener("click", () => {
     const email = document.querySelector("#login-email").value;
     if (email.trim() == "") {
-        alert("Enter Email");
+        alert.setMessage("Enter Email");
     } else {
         forgotPassword(email);
     }
 });
+
+window.addEventListener('load', () => {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    let action = urlParams.get('action')
+    if(action) {
+        action = action.toLowerCase();    
+        if(action === 'signup') {
+            showRegistration();
+        }
+    }
+})
