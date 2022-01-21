@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/000000/external-dashboard-blogger-vitaliy-gorbachev-flat-vitaly-gorbachev.png">
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="Dashboard.css">
+
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <!-- <img src="logo.png" alt=""> -->
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">The Student</span>
+                    <span class="profession">Marketplace</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <div class="text logo-text">
+                    <span class="name">Welcome:</span>
+                    <br>
+                    <span id="userEmail" class="useremail"></span>
+                </div>
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="Dashboard.html">
+                            <i class='bx bx-home-alt icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-message-dots icon'></i>
+                            <span class="text nav-text">Messages</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-user icon'></i>
+                            <span class="text nav-text">Profile</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+            
+                <li class="" id="#open-modal">
+                    <a class="" href="#open-modal">
+                        <i class='bx bx-cog icon'></i>
+                        <span class="text nav-text">ChangeLog</span>
+                    </a>
+                </li>
+                <li class="" id="signout">
+                    <a href="#">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+
+            </div>
+        </div>
+
+    </nav>
+
+    <section class="home">
+        <div class="text">Welcome To Your Dashboard </div>
+        <div class="text1">It's</div>
+        <div id="info-box">
+            <div id="day"></div>
+            <div id="date"></div>
+            <div id="clock"></div>
+
+            <div id="open-modal" class="modal-window">
+                <div>
+                    <a href="#" title="Close" class="modal-close">Close</a>
+                    <h1>Created By:</h1>
+                    <div>Raheem</div>
+                    <div>ChangeLog: 0.2.2<br>
+                    Added a New Dashboard
+                    <br>
+                    Added a New Sidebar
+                    <br>
+                    Added A New Time and Date
+                    <br>
+                    Added A New Search Bar
+                    <br>
+                    Added DarkMode
+                    <br>
+                    Added A New Signout Button
+                    <br>
+                    <br>
+                    <div>Coming Soon:<br>
+                    Weather Dashboard
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
+    <script src="/js/auth.js"></script>
+    <script src="/js/startpage.js"></script>
+    <script src="/js/tester.js"></script>
+    <script src="/js/weather.js "></script>
+    <script src="/js/time.js"></script>
+
+</body>
+
+</html>

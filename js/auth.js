@@ -31,7 +31,7 @@ const authenticate = (email, password) => {
         .auth()
         .signInWithEmailAndPassword(email, password).
         then(() => {
-            window.location.replace("startpage.html");
+            window.location.replace("Dashboard.html");
         })
         .catch(function (error) {
             // Handle Errors here.
