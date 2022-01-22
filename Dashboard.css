@@ -492,6 +492,10 @@ small {
     color: var(--text-color);
 }
 
+.dark .weather-icon {
+    filter: invert(1);
+}
+
 .weather-icon img {
     display: block;
     margin: 0 auto;
