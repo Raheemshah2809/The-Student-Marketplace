@@ -380,7 +380,7 @@ body.dark .home .text {
 }
 
 .modal-window>div {
-    width: 400px;
+    width: 350px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -424,7 +424,8 @@ a {
     display: grid;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 37vh;
+    padding: 0px 60px;
 }
 
 .modal-window>div {
@@ -448,4 +449,199 @@ small {
 
 .btn i {
     padding-right: 0.3em;
+}
+
+.app-title {
+    width: 300px;
+    height: 50px;
+    border-radius: 10px 10px 0 0;
+}
+
+.app-title p {
+    text-align: center;
+    padding: 15px;
+    margin: 0 auto;
+    font-size: 1.2em;
+    color: var(--text-color);
+}
+
+.notification {
+    background-color: #f8d7da;
+    display: none;
+}
+
+.notification p {
+    color: #721c24;
+    font-size: 1.2em;
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.weather-container {
+    width: 300px;
+    height: 260px;
+    color: var(--text-color);
+    background: var(--body-color);
+    background-color: transparent;
+}
+
+.weather-icon {
+    width: 300px;
+    height: 108px;
+    color: var(--text-color);
+}
+
+.weather-icon img {
+    display: block;
+    margin: 0 auto;
+}
+
+.temperature-value {
+    width: 319px;
+    height: 65px;
+}
+
+.temperature-value p {
+    padding: 0;
+    margin: 0;
+    color: var(--text-color);
+    font-size: 4em;
+    text-align: center;
+    cursor: pointer;
+}
+
+.temperature-value p:hover {}
+
+.temperature-value span {
+    color: var(--text-color);
+    font-size: 0.5em;
+}
+
+.temperature-description {}
+
+.temperature-description p {
+    padding: 8px;
+    margin: 0;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.location p {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 0.8em;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+.onoffswitch3 {
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.onoffswitch3-checkbox {
+    display: none;
+}
+
+.onoffswitch3-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 0px solid #999999;
+    border-radius: 0px;
+}
+
+.onoffswitch3-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s;
+    -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch3-inner>span {
+    display: block;
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 14px;
+    color: var(--text-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.onoffswitch3-inner .onoffswitch3-active {
+    padding-left: 10px;
+    color: var(--body-color);
+    color: #FFFFFF;
+}
+
+.onoffswitch3-inner .onoffswitch3-inactive {
+    width: 100px;
+    padding-left: 16px;
+    background-color: #EEEEEE;
+    color: var(--text-color);
+    text-align: right;
+    background-color: transparent;
+}
+
+.onoffswitch3-switch {
+    display: block;
+    width: 50%;
+    margin: 0px;
+    text-align: center;
+    border: 0px solid #999999;
+    border-radius: 0px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.onoffswitch3-active .onoffswitch3-switch {
+    color: var(--text-color);
+    left: 0;
+    width: 160px;
+    background: var(--body-color);
+    
+}
+
+.onoffswitch3-inactive {
+    background: #A1A1A1;
+    right: 0;
+    width: 20px;
+    background-color: transparent;
+}
+
+.onoffswitch3-checkbox:checked+.onoffswitch3-label .onoffswitch3-inner {
+    margin-left: 0;
+}
+
+.glyphicon-remove {
+    padding: 3px 0px 0px 0px;
+    color: var(--text-color);
+    color: var(--body-color);
+    height: 25px;
+    width: 25px;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+.scroll-text {
+    color: var(--text-color);
+    background-color: transparent;
 }
