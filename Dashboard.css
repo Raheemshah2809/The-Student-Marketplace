@@ -649,5 +649,5 @@ small {
 
 .scroll-text {
     color: var(--text-color);
-    width: calc(100% - 160px);float: right;
+    width: calc(115% - 160px);float: right;
 }

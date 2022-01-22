@@ -101,11 +101,9 @@ document.querySelector("#show-register").addEventListener("click", () => {
     showRegistration();
 });
 
-//sign in when you hit enter
 document.querySelector("#login-password").addEventListener("keyup", (e) => {
-    if (Event.keyCode === 13) {
+    if (Event.key == 13) {
         e.preventDefault();
-
         login();
     }
 });
