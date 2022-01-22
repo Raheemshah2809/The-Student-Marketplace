@@ -610,6 +610,7 @@ small {
     position: absolute;
     top: 0;
     bottom: 0;
+    background: transparent;
 }
 
 .onoffswitch3-active .onoffswitch3-switch {
@@ -617,6 +618,7 @@ small {
     left: 0;
     width: 160px;
     background: var(--body-color);
+    background: transparent;
     
 }
 
@@ -643,5 +645,5 @@ small {
 
 .scroll-text {
     color: var(--text-color);
-    background-color: transparent;
+    width: calc(100% - 160px);float: right;
 }
