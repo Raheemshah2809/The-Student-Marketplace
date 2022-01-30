@@ -102,7 +102,7 @@ document.querySelector("#show-register").addEventListener("click", () => {
 });
 
 document.querySelector("#login-password").addEventListener("keyup", (e) => {
-    if (Event.key == 13) {
+    if (e.keyCode == 13) {
         e.preventDefault();
         login();
     }

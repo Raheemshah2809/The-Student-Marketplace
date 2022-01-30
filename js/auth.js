@@ -2,10 +2,12 @@
 var firebaseConfig = {
     apiKey: "AIzaSyAgF9KUjPINzEvI2M3_s9wmahVD88J52Z4",
     authDomain: "studentmarketplaceindex.firebaseapp.com",
+    databaseURL: "https://studentmarketplaceindex-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "studentmarketplaceindex",
     storageBucket: "studentmarketplaceindex.appspot.com",
     messagingSenderId: "1083392969591",
-    appId: "1:1083392969591:web:03b9f5b1926a4a49f76f72",
+    appId: "1:1083392969591:web:03b9f5b1926a4a49f76f72"
+
 };
 
 // Initialize Firebase
@@ -15,7 +17,7 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
 const signOut = () => {
-    firebase 
+    firebase
         .auth()
         .signOut()
         .catch(function (error) {
@@ -30,7 +32,7 @@ const authenticate = (email, password) => {
     firebase
         .auth()
         .signInWithEmailAndPassword(email, password).
-        then(() => {
+    then(() => {
             window.location.replace("Dashboard.html");
         })
         .catch(function (error) {
@@ -43,7 +45,7 @@ const authenticate = (email, password) => {
 
 const signOutButton = document.querySelector("#signout");
 
-if(signOutButton) {
+if (signOutButton) {
     signOutButton.addEventListener("click", () => {
         signOut();
     });

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,48 +9,50 @@
         href="https://img.icons8.com/external-vitaliy-gorbachev-flat-vitaly-gorbachev/58/000000/external-dashboard-blogger-vitaliy-gorbachev-flat-vitaly-gorbachev.png">
 
     <!----======== CSS ======== -->
-    <link rel="stylesheet" href="/css/Dashboard.css">
+    <link rel="stylesheet" href="/css/feed.css">
     <link rel="stylesheet" href="/font/Rimouski.css">
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+
 
     <!----===== Boxicons CSS ===== -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link rev="help" href="https://css-tricks.com/forums/topic/how-to-create-article-list/" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Create Your Post</title>
 </head>
 
 <body>
-
-    <nav class="sidebar close animate__animated animate__fadeInDownBig">
+    <nav class="sidebar close">
         <header>
             <div class="image-text">
                 <span class="image">
-                    <!-- <img src="logo.png" alt=""> -->
+                    <img src="/images/logo.png" alt="">
                 </span>
-    
+
                 <div class="text logo-text">
                     <span class="name">The Student</span>
                     <span class="profession">Marketplace</span>
                 </div>
             </div>
-    
             <i class='bx bx-chevron-right toggle'></i>
         </header>
-    
+
         <div class="menu-bar">
             <div class="menu">
                 <div class="text logo-text">
-                    <span class="name">Welcome:</span>
-                    <br>
+                    <span class="name">Username:</span>
                     <span id="userEmail" class="useremail"></span>
+                    <h2 id="Update" class="user-email"></h2>
                 </div>
-    
+
                 <li class="search-box">
                     <i class='bx bx-search icon'></i>
                     <input type="text" placeholder="Search...">
                 </li>
-    
+
                 <ul class="menu-links">
                     <li class="nav-link">
                         <a href="Dashboard.html">
@@ -57,31 +60,25 @@
                             <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
-    
+
                     <li class="nav-link">
                         <a href="post.html">
                             <i class='bx bx-upload icon'></i>
                             <span class="text nav-text">Upload</span>
                         </a>
                     </li>
-    
+
                     <li class="nav-link">
                         <a href="feed.html">
                             <i class='bx bx-news icon'></i>
                             <span class="text nav-text">Feed</span>
                         </a>
                     </li>
-                    <!-- <li class="nav-link" id="">
-                        <a href="#">
-                            <i class='bx bx-user icon'></i>
-                            <span class="text nav-text">Profile</span>
-                        </a>
-                    </li> -->
                 </ul>
             </div>
-    
+
             <div class="bottom-content">
-    
+
                 <li class="" id="#open-modal">
                     <a class="" href="#open-modal">
                         <i class='bx bx-cog icon'></i>
@@ -94,81 +91,31 @@
                         <span class="text nav-text">Logout</span>
                     </a>
                 </li>
-    
-    
+
+
                 <li class="mode">
                     <div class="sun-moon">
                         <i class='bx bx-moon icon moon'></i>
                         <i class='bx bx-sun icon sun'></i>
                     </div>
                     <span class="mode-text text">Dark mode</span>
-    
+
                     <div class="toggle-switch">
                         <span class="switch"></span>
                     </div>
                 </li>
-    
+
             </div>
         </div>
-    
+
     </nav>
 
-    <section class="home animate__animated animate__fadeInDownBig">
-        <div class="text">Welcome To Your Dashboard </div>
-        <div class="text1">It's</div>
-        <div id="info-box">
-            <div id="day"></div>
-            <div id="date"></div>
-            <div id="clock"></div>
-        </div>
-        </div>
-        
-        <br>
-        <div class="container">
-            <div class="app-title">
-                <p>Weather</p>
-            </div>
-            <div class="notification"> </div>
-            <div class="weather-container">
-                <div class="weather-icon">
-                    <img src="/icons/unknown.png" alt="">
-                </div>
-                <div class="temperature-value">
-                    <p>- °<span>C</span></p>
-                </div>
-                <div class="temperature-description">
-                    <p> - </p>
-                </div>
-                <div class="location">
-                    <p>-</p>
-                </div>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="onoffswitch3">
-            <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3" checked>
-            <label class="onoffswitch3-label" for="myonoffswitch3">
-                <span class="onoffswitch3-inner">
-                    <span class="onoffswitch3-active">
-                        <marquee class="scroll-text">0.2.4 Is Here -- QOL Tweaks To Dark Mode -- 
-                            Added Feed Page --
-                            Added Post Page --
-                            Fixed Bugs --
-                            Added Online Indicators --
-                            Many More Features Added --
-                        </marquee>
-                        <br>
-                        <span class="onoffswitch3-switch">APP NEWS<span
-                                class="glyphicon glyphicon-remove"></span></span>
-                    </span>
-                    <span class="onoffswitch3-inactive"><span class="onoffswitch3-switch">SHOW App
-                            NEWS</span></span>
-                </span>
-            </label>
+    <section class="home " >
+        <div class="text">Welcome To Your Feed</div>
+        <div class="loader"></div>
+        <div class="row mt-4" id="posts">
         </div>
     </section>
-
 
     <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
@@ -189,6 +136,7 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/post.js"></script>
 </body>
 
 </html>
