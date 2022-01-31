@@ -82,7 +82,7 @@ function getdata() {
                 "<div class='card'>" +
                 "<h4> Seller: " + value.userEmail+ "</h4>" +
                 "<h4> Type: " + value.isAlive + "</h4>" +
-                "<h4> Price: " + value.price + "</h4>" +
+                "<h4> Price: £" + value.price + "</h4>" +
                 "<h4> Upload Date: <br>" + value.timestamp + "</h4>" +
                 "<h4> Condition: " + value.typeDeath + "</h4>" +
                 "<img class=\"img-fluid\" src='" + value.imageURL + "'/>" +
