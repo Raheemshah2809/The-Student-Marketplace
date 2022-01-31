@@ -81,7 +81,7 @@ function getdata() {
 
             if(!data) {
                 const errorMessage = document.createElement('h1');
-                errorMessage.innerText = "No Posts Found";
+                errorMessage.innerText = "Uh Oh! No Posts Found, Please Wait For Some, Or Upload One";
                 errorMessage.classList.add('text-center');
                 posts_div.append(errorMessage);
             }

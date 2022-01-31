@@ -1205,3 +1205,14 @@ form {
 .user-email{
     font-size: 16px;    
 }
+
+.dark .result{
+    color: var(--text-color)
+}
+.dark .alive1{
+    color: var(--text-color);
+}
+
+.dark .price{
+    color: var(--text-color);
+}
