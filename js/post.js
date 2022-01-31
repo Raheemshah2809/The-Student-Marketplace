@@ -1,4 +1,5 @@
-function upload() {
+function upload(e) {
+    e.preventDefault();
     var image = document.getElementById('image').files[0];
     var post = document.getElementById('post').value;
     var imageName = image.name;
@@ -64,19 +65,27 @@ function upload() {
 }
 
 function getdata() {
+
     firebase.database().ref('thepost/').once('value').then(function (snapshot) {
+    
         //get your posts div
         var posts_div = document.getElementById('posts');
-        if(posts_div)  {
-            //remove all remaining data in that div
-            posts_div.innerHTML = "";
-             //get data from firebase
-            var data = snapshot.val();
-            console.log(data);
+        //remove all remaining data in that div
+        posts_div.innerHTML = "";
 
+        var data = snapshot.val();
+
+        if(posts_div)  {
             const loader = document.querySelector('.loader');
             if(loader) loader.remove();
 
+            if(!data) {
+                const errorMessage = document.createElement('h1');
+                errorMessage.innerText = "No Posts Found";
+                errorMessage.classList.add('text-center');
+                posts_div.append(errorMessage);
+            }
+            
             for (let [key, value] of Object.entries(data)) {
                 posts_div.innerHTML = "<div class='col-sm-3 mt-2 mb-1'>" +
                 "<div class='card'>" +
@@ -92,7 +101,7 @@ function getdata() {
                 "</div></div></div>" + posts_div.innerHTML;
             }
         }
-    })
+    });
 }
 
 function delete_post(key) {

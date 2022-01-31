@@ -11,6 +11,7 @@ if (!modal) {
             <a href="#" title="Close" class="modal-close">Close</a>
             <h1>Created By:</h1>
             <div>Raheem</div>
+            <br>
             <div>Updates To The Site Will be Placed Here</div>
             <div>ChangeLog: 0.2.4<br>
             Added Feed Page <br>

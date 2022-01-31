@@ -859,3 +859,15 @@ form {
 .user-email{
     font-size: 16px;    
 }
+
+.text-center {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+}

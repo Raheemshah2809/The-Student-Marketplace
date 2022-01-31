@@ -130,7 +130,7 @@
         <div class="container mt-2">
             <div class="card">
                 <div class="card-body">
-                    <form id="post-form" action="#">
+                    <form id="post-form" action="#" onsubmit="upload(event)">
                         <div class="wrapper">
                             <div id="status"></div>
                                 <div class="result">
@@ -149,7 +149,7 @@
                             <br>
                             <h4 class="price">Enter A Price</h4>
                             <h6 class="price">Maximum Value £2500</h6>
-                            <input type="tel" min="1" max="2500"  id="price" class="price-control" placeholder="Price"required>
+                            <input type="tel" min="1" max="2500"  id="price" class="price-control" placeholder="£ Price"required>
                             <br>
                             <br>
                             <h4 class="alive1">Condition</h4>
@@ -169,19 +169,20 @@
                             <textarea id="contact" class="form-control" placeholder="Add Your Contact Details Here" required></textarea>
                             <br>
                         </div>
+                        <div class="fileselect">    
+                            <input type="file" class="fileuploader" id="image" accept="images/*" required>
+                        </div>
+                        <br>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-success">Upload</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
-        <div class="fileselect">    
-            <input type="file" class="fileuploader" id="image" accept="images/*">
-        </div>
         <br>
         <br>
         <br>
-        <div class="text-center">
-            <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
-        </div>
         <br>
         <div id="myProgress">
             <div id="myBar"></div>
