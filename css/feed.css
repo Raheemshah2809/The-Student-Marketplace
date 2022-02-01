@@ -771,17 +771,24 @@ form {
 }
 
 .card {
-    position: relative;
-    display: flex;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, .125);
-    border-radius: 0.25rem;
-    flex-direction: column;
+    max-width: 280px;
+    margin: 45px auto;
+    padding: 12px;
+    border-radius: 14px;
+    background: linear-gradient(to top left, #fbfbfc, #eaeaf0);
+    color: #000000;
     text-align: center;
 }
+
+.dark.card {
+        max-width: 280px;
+        margin: 45px auto;
+        padding: 12px;
+        border-radius: 14px;
+        background: linear-gradient(to top left, #3a3b3c, #3a3b3c);
+        color: var(white);
+        text-align: center;
+    }
 
 
 .row {
@@ -856,8 +863,8 @@ form {
     }
 }
 
-.user-email{
-    font-size: 16px;    
+.user-email {
+    font-size: 16px;
 }
 
 .text-center {
@@ -872,7 +879,7 @@ form {
     margin: -76px 0 0 -76px;
 }
 
-.dark .text-center{
+.dark .text-center {
     text-align: center;
     width: 100%;
     position: absolute;
