@@ -771,26 +771,23 @@ form {
 }
 
 .card {
-    max-width: 280px;
-    margin: 45px auto;
-    padding: 12px;
-    border-radius: 14px;
-    background: linear-gradient(to top left, #fbfbfc, #eaeaf0);
-    color: #000000;
-    text-align: center;
-}
-
-.dark.card {
-        max-width: 280px;
-        margin: 45px auto;
-        padding: 12px;
-        border-radius: 14px;
-        background: linear-gradient(to top left, #3a3b3c, #3a3b3c);
-        color: var(white);
+    position: relative;
+        display: flex;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0, 0, 0, .125);
+        border-radius: 0.25rem;
+        flex-direction: column;
         text-align: center;
-    }
-
-
+        border-radius: 14px;
+    
+}
+.dark .card {
+    background: #3c3d3f;
+    color: var(--text-color);
+}
 .row {
     width: 100%;
     display: flex;
@@ -879,15 +876,7 @@ form {
     margin: -76px 0 0 -76px;
 }
 
-.dark .text-center {
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    z-index: 1;
-    width: 120px;
-    height: 120px;
-    margin: -76px 0 0 -76px;
-    color: var(--text-color)
+.card.dark{
+    background: linear-gradient(to top left, #3a3b3c, #3a3b3c);
+    color: var(white);
 }

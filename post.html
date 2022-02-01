@@ -170,7 +170,7 @@
                             <br>
                         </div>
                         <div class="fileselect">    
-                            <input type="file" class="fileuploader" id="image" accept="images/*" required>
+                            <input type="file" class="fileuploader" id="image" accept="images/*" (change)="getFile($event)" required>
                         </div>
                         <br>
                         <div class="text-center">
