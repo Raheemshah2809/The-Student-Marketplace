@@ -50,5 +50,6 @@
             $status.html("Geolocation is not supported by your browser.").show();;
         }
     };
-
-    window.onload(geolocate());
+    
+    window.onload = geolocate();
+    

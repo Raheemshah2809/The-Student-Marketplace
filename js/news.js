@@ -72,22 +72,24 @@
                 }))
             })
         }
+    })
     var h = !1;
 
 
     jQuery(".breaking-news").on("mouseenter", function () {
-            var e = jQuery(this).attr("rel");
-            clearTimeout(u[e])
-        }).on("mouseleave", function () {
-            var e = jQuery(this).attr("rel");
-            u[e] = !1
-        }),
-        jQuery("[data-spacer-color]", "body").toArray().forEach2(function (e) {
-            var t = jQuery(e);
-            t.css({
-                color: t.data("spacer-color"),
-                "background-color": t.data("spacer-color")
-            })
+        var e = jQuery(this).attr("rel");
+        clearTimeout(u[e])
+    }).on("mouseleave", function () {
+        var e = jQuery(this).attr("rel");
+        u[e] = !1
+    });
+
+    jQuery("[data-spacer-color]", "body").toArray().forEach2(function (e) {
+        var t = jQuery(e);
+        t.css({
+            color: t.data("spacer-color"),
+            "background-color": t.data("spacer-color")
         })
-}(jQuery)
-;
+    });
+}(jQuery);
+
