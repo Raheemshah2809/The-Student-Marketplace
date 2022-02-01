@@ -64,6 +64,7 @@ const login = () => {
     } else {
         authenticate(email, password);
     }
+        
 };
 
 
