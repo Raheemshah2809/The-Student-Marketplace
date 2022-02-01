@@ -169,9 +169,12 @@
                             <textarea id="contact" class="form-control" placeholder="Add Your Contact Details Here" required></textarea>
                             <br>
                         </div>
-                        <div class="fileselect">    
-                            <input type="file" class="fileuploader" id="image" accept="images/*" (change)="getFile($event)" required>
-                        </div>
+                        <md-button>
+                            
+                                <div class="fileselect">    
+                                    <input type="file" class="fileuploader" id="image" accept="images/*" (change)="getFile(e)" required>
+                                    
+                                </div>
                         <br>
                         <div class="text-center">
                             <button type="submit" class="btn btn-success">Upload</button>
