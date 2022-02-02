@@ -7,11 +7,11 @@ var firebaseConfig = {
     storageBucket: "studentmarketplaceindex.appspot.com",
     messagingSenderId: "1083392969591",
     appId: "1:1083392969591:web:03b9f5b1926a4a49f76f72"
+
 };
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
 
 //invokes firebase authentication.
 const auth = firebase.auth();
