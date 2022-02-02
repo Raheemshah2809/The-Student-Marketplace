@@ -835,7 +835,21 @@ form {
 /* XX-Large devices (larger desktops, 1400px and up)*/
 @media (min-width: 1400px) {}
 
-.loader {
+.loader__wrapper {
+    background-color: var(--body-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    transition: all .2s;
+    z-index: 1;
+    visibility: visible;
+    pointer-events: none;
+}
+
+.loader__wrapper__load-icon {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -848,6 +862,15 @@ form {
     border-top: 16px solid #3498db;
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
+}
+
+.loader__wrapper.hide, .loader__wrapper.hide .loader__wrapper__load-icon {
+    width: 0;
+    height: 0;
+    transform: translate(-100%);
+    opacity: 0;
+    transition: all .2s;
+    visibility: hidden;
 }
 
 @keyframes spin {
