@@ -1,3 +1,5 @@
+
+
 function upload(e) {
     e.preventDefault();
     var image = document.getElementById('image').files[0];
@@ -66,18 +68,22 @@ function upload(e) {
 
 function getdata() {
 
-    firebase.database().ref('thepost/').once('value').then(function (snapshot) {
+    const ref = firebase.database().ref('thepost/');
+
+    ref.once('value').then(function (snapshot) {
     
         //get your posts div
         var posts_div = document.getElementById('posts');
-        //remove all remaining data in that div
-        posts_div.innerHTML = "";
-
-        var data = snapshot.val();
-
+        
+        
         if(posts_div)  {
-            const loader = document.querySelector('.loader');
-            if(loader) loader.remove();
+            var data = snapshot.val();
+            //remove all remaining data in that div
+            posts_div.innerHTML = "";
+            
+            const loader = document.querySelector('.loader__wrapper');
+            // if(loader) loader.remove();
+            if(loader && loader.classList.contains('hide')) loader.classList.remove('hide');
 
             if(!data) {
                 const errorMessage = document.createElement('h1');
@@ -85,8 +91,10 @@ function getdata() {
                 errorMessage.classList.add('text-center');
                 posts_div.append(errorMessage);
             }
-            
+
             for (let [key, value] of Object.entries(data)) {
+                
+
                 posts_div.innerHTML = "<div class='col-sm-3 mt-2 mb-1'>" +
                 "<div class='card'>" +
                 "<h4> Seller: " + value.userEmail+ "</h4>" +
@@ -100,6 +108,8 @@ function getdata() {
                 "<button class='btn btn-danger' id='" + key + "' onclick='delete_post(this.id)'>Delete</button>" +
                 "</div></div></div>" + posts_div.innerHTML;
             }
+
+            if(loader && !loader.classList.contains('hide')) loader.classList.add('hide');
         }
     });
 }
@@ -113,8 +123,6 @@ function delete_post(key) {
 window.onload = function () {
     getdata();
 }
-
-
 
 const Update = document.getElementById('Update');
 
@@ -132,4 +140,3 @@ window.addEventListener('offline', function () {
     Update.textContent = 'You are offline';
     Update.style.color = 'red';
 })
-
