@@ -112,7 +112,7 @@ document.querySelector("#login-password").addEventListener("keyup", (e) => {
 document.querySelector("#forgot-password").addEventListener("click", () => {
     const email = document.querySelector("#login-email").value;
     if (email.trim() == "") {
-        alert.setMessage("Enter Email");
+        alert.setMessage("Enter The Email You Used To Register With");
     } else {
         forgotPassword(email);
     }

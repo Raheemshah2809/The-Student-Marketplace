@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Create Your Post</title>
+    <title>View Your Feed</title>
 </head>
 
 <body>
@@ -29,18 +29,18 @@
         <header>
             <div class="image-text">
                 <span class="image">
-                    <!-- <img src="logo.png" alt=""> -->
+                    <img src="images/logo.png" alt="">
                 </span>
-
+    
                 <div class="text logo-text">
                     <span class="name">The Student</span>
                     <span class="profession">Marketplace</span>
                 </div>
             </div>
-
+    
             <i class='bx bx-chevron-right toggle'></i>
         </header>
-
+    
         <div class="menu-bar">
             <div class="menu">
                 <div class="text logo-text">
@@ -49,12 +49,12 @@
                     <span id="userEmail" class="useremail"></span>
                     <h2 id="Update" class="user-email"></h2>
                 </div>
-
+    
                 <li class="search-box" title="Search Box">
                     <i class='bx bx-search icon'></i>
                     <input type="text" placeholder="Search...">
                 </li>
-
+    
                 <ul class="menu-links">
                     <li class="nav-link" title="Dashboard">
                         <a href="Dashboard.html">
@@ -62,31 +62,31 @@
                             <span class="text nav-text">Dashboard</span>
                         </a>
                     </li>
-
+    
                     <li class="nav-link" title="Post">
-                        <a href="post.html">
+                        <a href="upload.html">
                             <i class='bx bx-upload icon'></i>
                             <span class="text nav-text">Upload</span>
                         </a>
                     </li>
-
+    
                     <li class="nav-link" title="Feed">
                         <a href="feed.html">
                             <i class='bx bx-news icon'></i>
                             <span class="text nav-text">Feed</span>
                         </a>
                     </li>
-                    <!-- <li class="nav-link" id="">
-                        <a href="#">
-                            <i class='bx bx-user icon'></i>
-                            <span class="text nav-text">Profile</span>
+                    <li class="nav-link" id="">
+                        <a href="404.html">
+                            <i class='bx bx-chat icon'></i>
+                            <span class="text nav-text">Chat</span>
                         </a>
-                    </li> -->
+                    </li>
                 </ul>
             </div>
-
+    
             <div class="bottom-content">
-
+    
                 <li class="" id="#open-modal" title="Changelog">
                     <a class="" href="#open-modal">
                         <i class='bx bx-cog icon'></i>
@@ -99,28 +99,30 @@
                         <span class="text nav-text">Logout</span>
                     </a>
                 </li>
-
-
+    
+    
                 <li class="mode" title="DarkMode/LightMode">
                     <div class="sun-moon">
                         <i class='bx bx-moon icon moon'></i>
                         <i class='bx bx-sun icon sun'></i>
                     </div>
                     <span class="mode-text text">Dark mode</span>
-
+    
                     <div class="toggle-switch">
                         <span class="switch"></span>
                     </div>
                 </li>
-
+    
             </div>
         </div>
-
+    
     </nav>
 
     <section class="home ">
         <div class="text">Welcome To Your Feed</div>
-        <div class="loader"></div>
+        <div class="loader__wrapper">
+            <div class="loader__wrapper__load-icon"></div>
+        </div>
         <div class="row mt-4" id="posts">
         </div>
     </section>

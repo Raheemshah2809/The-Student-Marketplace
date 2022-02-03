@@ -13,11 +13,15 @@ if (!modal) {
             <div>Raheem</div>
             <br>
             <div>Updates To The Site Will be Placed Here</div>
-            <div>ChangeLog: 0.2.4<br>
-            Added Feed Page <br>
-            Added Post Page <br>
+            <div>ChangeLog: 0.2.6<br>
+            Added Chat Icon<br>
+            Chat Functionality Coming 0.2.7 <br>
             Fixed Bugs <br>
             Added Online Indicators <br>
+            QOL To Post Page <br>
+            QOL To Upload Page <br>
+            Fixed Sign Up Page <br>
+            Fixed Sidebar Missing Logo and Online Indicators <br>
             </div>
             <br>
             </div>

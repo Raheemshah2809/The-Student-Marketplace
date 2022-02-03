@@ -2,30 +2,31 @@
 <html>
 
 <head>
-  <title>Authentication</title>
+  <title>SignIn/SignUp</title>
   <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/signin.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-  <style>
-  </style>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/login-rounded-right.png"/>
 </head>
 
 <body>
 
-  <div class="title">
-    <h1 class="title1">The Student Marketplace</h1>
-    <h1 class="title2">Urgent Notice:</h1>
-    <h6 class="title3">Iphone User's Cannot Upload, Implementing Fix</h6>
+  <div class="title1">
+    <h1 class="title1 animate__animated animate__fadeInDownBig">The Student Marketplace</h1>
+    <!-- <h1 class="title2">Urgent Notice:</h1>
+    <h6 class="title3">Iphone User's Cannot Upload, Implementing Fix</h6> -->
     <br>
 
   </div>
 
   <div class="forms-out">
-    <div class="forms-in">
+    <div class="forms-in animate__animated animate__bounceIn">
       <div id="registration-page" class="hide">
-        <button id="show-login">Sign In</button>
+        <button id="show-login">Already Got An Account? Sign In Here</button>
         <h3>Welcome Please Confirm Your Email and A Password Rest Form Will Be Sent To Your Valid .AC.UK Email</h3>
         <h3>Sign Up</h3>
         Email <br />
@@ -33,41 +34,39 @@
         Confirm Email <br />
         <input type="email" id="registration-reemail" autocomplete="enabled" required /><br />
         <br />
-        <!-- Create a Password<br />
-        <input type="password" id="registration-password" /><br /> -->
-        <center><button id="register">Sign Up</button></center>
+        <button id="register">Sign Up</button>
         <br>
-        <center><button onclick="location.href='/index.html'">Home</button></center>
+        <button onclick="location.href='/index.html'">Home</button>
         
       </div>
 
       <div id="login-page">
-        <button id="show-register">Sign Up</button>
+        <button id="show-register">New? Click Me To Sign Up</button> 
         <h3> Sign In With Your Username And Password To Get Started</h3>
-        <h3>Sign In</h3>
         Email <br />
         <input type="email" id="login-email" /><br />
         Password <br />
         <input type="password" id="login-password" /><br />
-        <p id="forgot-password">Forgot Password</p>
-        <center><button id="login">Sign In</button></center>
         <br>
-        <center><button onclick="location.href='/index.html'">Home</button></center>
+        <button id="login">Sign In</button>
+        <br>
+        <button id="forgot-password">Forgot Password? Click Me To Reset</button>
+        <br>
+        <button onclick="location.href='/index.html'">Home</button>
       </div>
 
       <div id="homepage" class="hide">
         <button id="signout">Sign Out</button>
         <h3>Logged In</h3>
         <br>
-        <center><button onclick="location.href='/index.html'">Home</button></center>
+        <button onclick="location.href='/index.html'">Home</button>
       </div>
     </div>
   </div>
+  <h6 class="title3 animate__animated animate__backInDown">App Still In Development, Expect Bugs.</h6>
+  <h6 class="title4 animate__animated animate__backInDown">Version: 0.2.6</h6>
 
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use-->
   <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
   <script src="/js/auth.js"></script>
   <script src="/js/alert.js"></script>

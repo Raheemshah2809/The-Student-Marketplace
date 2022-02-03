@@ -1,4 +1,5 @@
 
+
 function upload(e) {
     e.preventDefault();
     var image = document.getElementById('image').files[0];

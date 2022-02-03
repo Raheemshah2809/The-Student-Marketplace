@@ -57,6 +57,9 @@ body{
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    display: block;
+    margin: 0 auto;
+
 }
 
 .forms-in button:hover {
@@ -372,7 +375,20 @@ body{
     color: rgb(224, 13, 13);
     text-align: center;
     position: relative;
-    bottom: 59px;
+    top: 530px;
 }
 
+.title4{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Poppins, sans-serif;
+    color: rgb(224, 13, 13);
+    text-align: center;
+    position: relative;
+    top: 453px;
+}
 
+.center-align{
+    display: block;
+    margin: 0 auto;
+}
