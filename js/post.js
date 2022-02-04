@@ -191,7 +191,7 @@ function getdata() {
                 errorMessage.classList.add('hidden');
             }
 
-            posts_div.appendChild(card);
+            posts_div.prepend(card);
         }   
     });
 
