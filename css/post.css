@@ -1196,6 +1196,11 @@ form {
     text-align: center;
 }
 
+.form-control2{
+    width: 279px;
+    text-align: center;
+}
+
 .price-control{
     width: 279px;
     height: 20px;

@@ -16,7 +16,8 @@ function upload(e) {
             const price = document.querySelector('#price').value;
             const userEmail = document.querySelector('#userEmail').innerText;
             const contact = document.querySelector('#contact').value;
-            
+            const itemName = document.querySelector('#itemName').value;
+
             firebase.database().ref('thepost/').push().set({
                 text: post,
                 imageURL: downloadURL,
@@ -26,6 +27,7 @@ function upload(e) {
                 userEmail: userEmail,
                 contact: contact,
                 price: price,
+                itemName: itemName,
                 isAlive: document.querySelector('#livingStatus').value,
             }, function (error) {
                 if (error) {
@@ -33,14 +35,14 @@ function upload(e) {
                 } else {
                     alert.setMessage("Successfully uploaded");
                     document.getElementById('post-form').reset();
-                    location.href='/feed.html';
+                    location.href = '/feed.html';
                 }
             });
         });
     });
-    
+
     var i = 0;
-    
+
     function move(snapshot) {
         if (i == 0) {
             i = 1;
@@ -48,7 +50,7 @@ function upload(e) {
             var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             var width = 1;
             var id = setInterval(upload, 10);
-            
+
             function upload() {
                 if (width >= progress) {
                     clearInterval(id);
@@ -59,7 +61,7 @@ function upload(e) {
                     elem.innerHTML = width * 1 + '%';
                 }
             }
-            
+
         }
     }
 }
@@ -69,16 +71,18 @@ const db = firebase.database();
 function postChat(e) {
     e.preventDefault();
 
-    const { target } = e;
+    const {
+        target
+    } = e;
     const chatText = target.querySelector('.chat-txt');
     const usernameElement = document.getElementById('userEmail');
-    if(chatText && usernameElement) {
+    if (chatText && usernameElement) {
         const timestamp = Date.now();
         const message = chatText.value.trim();
         const username = usernameElement.textContent;
         const postId = target.dataset.postId;
         chatText.value = ""; // clearing the chat input
-        
+
         db.ref(`messages/${timestamp}`).set({
             username: username,
             message: message,
@@ -89,7 +93,7 @@ function postChat(e) {
 }
 
 function convertTimestampToDate(timestamp) {
-    if(timestamp) {
+    if (timestamp) {
         return new Date(+timestamp).toUTCString();
     }
     return "";
@@ -97,17 +101,19 @@ function convertTimestampToDate(timestamp) {
 
 function getMessages() {
     const messages = db.ref("messages");
-    messages.on("child_added", function(snapshot) {
+    messages.on("child_added", function (snapshot) {
         const data = snapshot.val();
-        if(data) {
+        if (data) {
             const parent = document.querySelector(`.card[data-post-id="${data.postId}"]`);
-            if(parent) {
+            if (parent) {
                 const messageContainer = parent.querySelector('.messages');
-                if(messageContainer) {
+                if (messageContainer) {
                     const chatMessage = document.createElement('li');
 
                     const date = document.createElement('p');
                     date.textContent = convertTimestampToDate(data.timestamp);
+
+                    const itemName = parent.querySelector('.item-name');
 
                     const username = document.createElement('p');
                     username.textContent = data.username;
@@ -118,7 +124,7 @@ function getMessages() {
                     chatMessage.append(date, username, message);
 
                     messageContainer.appendChild(chatMessage);
-                }   
+                }
             }
         }
     })
@@ -131,17 +137,17 @@ function getdata() {
     const post = db.ref("thepost");
     const currentlySignedInEmail = document.getElementById('userEmail');
     const checkHasPosts = () => {
-        if(!!posts_div.querySelector('.card') == false) {
-            if(errorMessage && errorMessage.classList.contains('hidden')) {
+        if (!!posts_div.querySelector('.card') == false) {
+            if (errorMessage && errorMessage.classList.contains('hidden')) {
                 errorMessage.classList.remove('hidden');
             }
         }
     }
 
     const showDeleteButtonIfOwner = (userEmail, key) => {
-        if(currentlySignedInEmail) {
+        if (currentlySignedInEmail) {
             const emailAddress = currentlySignedInEmail.textContent.toLowerCase();
-            if(userEmail.toLowerCase() == emailAddress) {
+            if (userEmail.toLowerCase() == emailAddress) {
                 return `<button class="btn btn-danger" id="${key}" onclick="delete_post(this.id)">Delete Post</button>`;
             };
         }
@@ -149,31 +155,39 @@ function getdata() {
     }
     post.on("child_removed", function (snapshot) {
         const key = snapshot.key;
-        if(key) {
+        if (key) {
             const card = document.querySelector(`.card[data-post-id="${key}"]`);
-            if(card) {
+            if (card) {
                 card.parentElement.remove();
                 checkHasPosts();
             }
         }
     });
-    
+
     post.on("child_added", function (snapshot) {
         const value = snapshot.val();
         const key = snapshot.key;
-        if(posts_div) {
+        if (posts_div) {
             const card = document.createElement('div');
             card.classList.add('col-sm-3', 'mt-2', 'mb-1');
+
+
             card.innerHTML = `
                 <div class="card" data-post-id="${key}">
-                    <h4>Seller: ${value.userEmail}</h4>
+                    <h4>Seller: <a href="mailto:${encodeURIComponent(value.userEmail)}
+                    ?subject=${encodeURIComponent(`I am Interested In Buying Your Item, The ${value.itemName ?? ''}`)}">${value.userEmail}</a></h4>
+                    
                     <h4>Type: ${value.isAlive}</h4>
                     <h4>Price: £${value.price}</h4>
                     <h4>Upload Date: <br> ${value.timestamp} </h4>
                     <h4>Condition: ${value.typeDeath} </h4>
                     <img class="img-fluid" src="${value.imageURL}"/>
-                    <h4>Description: <br> ${value.text} </p>
-                    <h4>Contact Details: <br> ${value.contact}</h4>
+                    <br>
+                    <h4 class="title>Title: <br> <span class="item-name">${value.itemName}</span></h4>
+                    <br>
+                    <h4 class="description">Description: <br> ${value.text}</p>
+                    <br>
+                    <h4>Contact Details: <br> <a href="tel:${value.contact}">${value.contact}</a></h4>
                     <br>
                     <div class="chat">
                     <h4>Comment Section</h4>
@@ -187,24 +201,24 @@ function getdata() {
                     ${showDeleteButtonIfOwner(value.userEmail, key)}
                     </div>`;
 
-            if(!errorMessage.classList.contains('hidden')) {
+            if (!errorMessage.classList.contains('hidden')) {
                 errorMessage.classList.add('hidden');
             }
 
             posts_div.prepend(card);
-        }   
+        }
     });
 
     post.once('value').then(function (snapshot) {
 
         checkHasPosts();
 
-        if(loader && !loader.classList.contains('hide')) loader.classList.add('hide');
+        if (loader && !loader.classList.contains('hide')) loader.classList.add('hide');
 
     });
 }
 
-window.onload = function() {
+window.onload = function () {
     getdata();
     getMessages();
 }

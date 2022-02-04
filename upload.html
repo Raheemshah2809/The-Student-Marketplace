@@ -50,12 +50,7 @@
                     <span id="userEmail" class="useremail"></span>
                     <h2 id="Update" class="user-email"></h2>
                 </div>
-    
-                <li class="search-box" title="Search Box">
-                    <i class='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search...">
-                </li>
-    
+
                 <ul class="menu-links">
                     <li class="nav-link" title="Dashboard">
                         <a href="Dashboard.html">
@@ -75,12 +70,6 @@
                         <a href="feed.html">
                             <i class='bx bx-news icon'></i>
                             <span class="text nav-text">Feed</span>
-                        </a>
-                    </li>
-                    <li class="nav-link" id="">
-                        <a href="404.html">
-                            <i class='bx bx-chat icon'></i>
-                            <span class="text nav-text">Chat</span>
                         </a>
                     </li>
                 </ul>
@@ -145,7 +134,10 @@
                                 <option value="Goods" selected>Goods</option>
                                 <option value="Services">Service</option>
                             </select>
-                            
+                            <br>
+                            <br>
+                            <h4 class="price">Enter Item Name</h4>
+                            <input type="text" id="itemName" class="form-control2" placeholder="Add A Correct Item Name" maxlength="20" required></input>
                             <br>
                             <br>
                             <h4 class="price">Enter A Price</h4>
@@ -166,8 +158,9 @@
                             <h4 class="price">Enter A Detailed Description</h4>
                             <textarea id="post" class="form-control" placeholder="Add A Description" required></textarea>
                             <br>
-                            <h4 class="price">Add Your Contact Details Here</h4>
-                            <textarea id="contact" class="form-control" placeholder="Add Your Contact Details Here" required></textarea>
+                            <h4 class="price">Add Your Phone Number Here</h4>
+                            <input type="tel" id="contact" class="form-control2" placeholder="+44-123-456-789" pattern="^\d{11}$"
+                            maxlength="15" required></input>
                             <br>
                         </div>
                         <md-button>
