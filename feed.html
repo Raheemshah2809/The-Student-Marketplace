@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/unicons.css">
     <title>View Your Feed</title>
 </head>
 
@@ -114,16 +115,24 @@
         <div class="text">Filter Searches Using The Search Bar Below</div>
         <div class="search-box" title="Search Box">
             <i class='bx bx-search icon'></i>
-            <input id="searchbar" type="text" placeholder="Search Posts..."/>
+            <input id="searchbar" type="text" placeholder="Search Posts..." />
         </div>
         <div class="loader__wrapper">
             <div class="loader__wrapper__load-icon"></div>
         </div>
 
         <div class="row mt-4" id="posts">
-            <h1 id="errorMessage" class="text-center hidden">Uh Oh! No Posts Found, Please Wait For Some, Or Upload One</h1>
+            <h1 id="errorMessage" class="text-center hidden">Uh Oh! No Posts Found, Please Wait For Some, Or Upload One
+            </h1>
         </div>
+        <div class="progress-wrap">
+            <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+                <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+            </svg>
+        </div>
+
     </section>
+
 
     <script src="js/firebase-app-compat.js"></script>
     <script src="js/firebase-storage-compat.js"></script>
@@ -143,6 +152,7 @@
     <script src="js/comment.js"></script>
     <script src="js/alert.js"></script>
     <script src="js/search.js"></script>
+    <script src="js/top.js"></script>
 </body>
 
 </html>
