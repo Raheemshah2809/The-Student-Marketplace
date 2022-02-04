@@ -1,5 +1,3 @@
-
-
 function upload(e) {
     e.preventDefault();
     var image = document.getElementById('image').files[0];
@@ -40,9 +38,9 @@ function upload(e) {
             });
         });
     });
-
+    
     var i = 0;
-
+    
     function move(snapshot) {
         if (i == 0) {
             i = 1;
@@ -50,7 +48,7 @@ function upload(e) {
             var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             var width = 1;
             var id = setInterval(upload, 10);
-
+            
             function upload() {
                 if (width >= progress) {
                     clearInterval(id);
@@ -61,68 +59,160 @@ function upload(e) {
                     elem.innerHTML = width * 1 + '%';
                 }
             }
-
+            
         }
     }
 }
 
+const db = firebase.database();
+
+function postChat(e) {
+    e.preventDefault();
+
+    const { target } = e;
+    const chatText = target.querySelector('.chat-txt');
+    const usernameElement = document.getElementById('userEmail');
+    if(chatText && usernameElement) {
+        const timestamp = Date.now();
+        const message = chatText.value.trim();
+        const username = usernameElement.textContent;
+        const postId = target.dataset.postId;
+        chatText.value = ""; // clearing the chat input
+        
+        db.ref(`messages/${timestamp}`).set({
+            username: username,
+            message: message,
+            timestamp: timestamp,
+            postId: postId
+        });
+    }
+}
+
+function convertTimestampToDate(timestamp) {
+    if(timestamp) {
+        return new Date(+timestamp).toUTCString();
+    }
+    return "";
+}
+
+function getMessages() {
+    const messages = db.ref("messages");
+    messages.on("child_added", function(snapshot) {
+        const data = snapshot.val();
+        if(data) {
+            const parent = document.querySelector(`.card[data-post-id="${data.postId}"]`);
+            if(parent) {
+                const messageContainer = parent.querySelector('.messages');
+                if(messageContainer) {
+                    const chatMessage = document.createElement('li');
+
+                    const date = document.createElement('p');
+                    date.textContent = convertTimestampToDate(data.timestamp);
+
+                    const username = document.createElement('p');
+                    username.textContent = data.username;
+
+                    const message = document.createElement('p');
+                    message.textContent = data.message;
+
+                    chatMessage.append(date, username, message);
+
+                    messageContainer.appendChild(chatMessage);
+                }   
+            }
+        }
+    })
+}
+
 function getdata() {
-
-    const ref = firebase.database().ref('thepost/');
-
-    ref.once('value').then(function (snapshot) {
-    
-        //get your posts div
-        var posts_div = document.getElementById('posts');
-        
-        
-        if(posts_div)  {
-            var data = snapshot.val();
-            //remove all remaining data in that div
-            posts_div.innerHTML = "";
-            
-            const loader = document.querySelector('.loader__wrapper');
-            // if(loader) loader.remove();
-            if(loader && loader.classList.contains('hide')) loader.classList.remove('hide');
-
-            if(!data) {
-                const errorMessage = document.createElement('h1');
-                errorMessage.innerText = "Uh Oh! No Posts Found, Please Wait For Some, Or Upload One";
-                errorMessage.classList.add('text-center');
-                posts_div.append(errorMessage);
+    const loader = document.querySelector('.loader__wrapper');
+    const posts_div = document.getElementById('posts');
+    const errorMessage = document.getElementById('errorMessage');
+    const post = db.ref("thepost");
+    const currentlySignedInEmail = document.getElementById('userEmail');
+    const checkHasPosts = () => {
+        if(!!posts_div.querySelector('.card') == false) {
+            if(errorMessage && errorMessage.classList.contains('hidden')) {
+                errorMessage.classList.remove('hidden');
             }
+        }
+    }
 
-            for (let [key, value] of Object.entries(data)) {
-                
-
-                posts_div.innerHTML = "<div class='col-sm-3 mt-2 mb-1'>" +
-                "<div class='card'>" +
-                "<h4> Seller: " + value.userEmail+ "</h4>" +
-                "<h4> Type: " + value.isAlive + "</h4>" +
-                "<h4> Price: £" + value.price + "</h4>" +
-                "<h4> Upload Date: <br>" + value.timestamp + "</h4>" +
-                "<h4> Condition: " + value.typeDeath + "</h4>" +
-                "<img class=\"img-fluid\" src='" + value.imageURL + "'/>" +
-                "<h4>Description: <br>" + value.text + "</p>" +
-                "<h4>Contact Details: <br>" + value.contact + "</h4>" +
-                "<button class='btn btn-danger' id='" + key + "' onclick='delete_post(this.id)'>Delete</button>" +
-                "</div></div></div>" + posts_div.innerHTML;
+    const showDeleteButtonIfOwner = (userEmail, key) => {
+        if(currentlySignedInEmail) {
+            const emailAddress = currentlySignedInEmail.textContent.toLowerCase();
+            if(userEmail.toLowerCase() == emailAddress) {
+                return `<button class="btn btn-danger" id="${key}" onclick="delete_post(this.id)">Delete Post</button>`;
+            };
+        }
+        return "";
+    }
+    post.on("child_removed", function (snapshot) {
+        const key = snapshot.key;
+        if(key) {
+            const card = document.querySelector(`.card[data-post-id="${key}"]`);
+            if(card) {
+                card.parentElement.remove();
+                checkHasPosts();
             }
-
-            if(loader && !loader.classList.contains('hide')) loader.classList.add('hide');
         }
     });
+    
+    post.on("child_added", function (snapshot) {
+        const value = snapshot.val();
+        const key = snapshot.key;
+        if(posts_div) {
+            const card = document.createElement('div');
+            card.classList.add('col-sm-3', 'mt-2', 'mb-1');
+            card.innerHTML = `
+                <div class="card" data-post-id="${key}">
+                    <h4>Seller: ${value.userEmail}</h4>
+                    <h4>Type: ${value.isAlive}</h4>
+                    <h4>Price: £${value.price}</h4>
+                    <h4>Upload Date: <br> ${value.timestamp} </h4>
+                    <h4>Condition: ${value.typeDeath} </h4>
+                    <img class="img-fluid" src="${value.imageURL}"/>
+                    <h4>Description: <br> ${value.text} </p>
+                    <h4>Contact Details: <br> ${value.contact}</h4>
+                    <br>
+                    <div class="chat">
+                    <h4>Comment Section</h4>
+                    <ul class="messages">
+                    </ul>
+                    <form data-post-id="${key}" onsubmit="postChat(event)">
+                    <input class="chat-txt" maxlength="100" placeholder="Add Comment"  type="text" />
+                    <button class="chat-btn" type="submit">Submit Comment</button>
+                    </form>
+                    </div>
+                    ${showDeleteButtonIfOwner(value.userEmail, key)}
+                    </div>`;
+
+            if(!errorMessage.classList.contains('hidden')) {
+                errorMessage.classList.add('hidden');
+            }
+
+            posts_div.appendChild(card);
+        }   
+    });
+
+    post.once('value').then(function (snapshot) {
+
+        checkHasPosts();
+
+        if(loader && !loader.classList.contains('hide')) loader.classList.add('hide');
+
+    });
+}
+
+window.onload = function() {
+    getdata();
+    getMessages();
 }
 
 function delete_post(key) {
     firebase.database().ref('thepost/' + key).remove();
-    getdata();
-
 }
 
-window.onload = function () {
-    getdata();
-}
 
 const Update = document.getElementById('Update');
 

@@ -536,9 +536,7 @@ small {
     color: var(--text-color);
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+
     background-color: transparent;
 }
 
@@ -623,9 +621,7 @@ small {
     text-align: center;
 }
 
-form {
-    margin: 2.5rem auto;
-}
+
 
 .find-me.btn {
     font-family: inherit;
@@ -902,4 +898,68 @@ form {
 .card.dark{
     background: linear-gradient(to top left, #3a3b3c, #3a3b3c);
     color: var(white);
+}
+
+.chat {
+    margin: 15px 0;
+    padding: 15px 10px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #bbb;
+    border-radius: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -ms-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+}
+
+.messages {
+    list-style: none;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+
+.messages li {
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+.chat-btn{
+    margin: 15px 0;
+    padding: 15px 10px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #bbb;
+    border-radius: 20px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -ms-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+    cursor: pointer;
+}
+
+.chat-btn:hover{
+    background-color: #3bc90f;
+}
+
+.chat-txt{
+    margin: 15px 0;
+    padding: 15px 10px;
+    width: 100%;
+    outline: none;
+    border: 1px solid;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
 }
