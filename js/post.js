@@ -123,7 +123,7 @@ function getMessages() {
 
                     chatMessage.append(date, username, message);
 
-                    messageContainer.appendChild(chatMessage);
+                    messageContainer.prepend(chatMessage);
                 }
             }
         }
