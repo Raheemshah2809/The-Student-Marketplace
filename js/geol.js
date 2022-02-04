@@ -35,15 +35,15 @@
         };
 
         const error = () => {
-            $status.html('Unable to retrieve your location. This may be due to your browser security settings').show();
+            $status.html('Unable to retrieve Time, Please Enable GPS, This may be due to your browser security settings').show();
             $trigger.html("Use").click(function (e) {
                 e.preventDefault();
             });
         };
 
         if (navigator.geolocation) {
-            $status.html("Locating...").show();
-            $trigger.html("Locating...");
+            $status.html("Gathering Time").show();
+            $trigger.html("Gathering Time");
             navigator.geolocation.getCurrentPosition(success, error);
         } else {
             $trigger.html("Not supported.");
