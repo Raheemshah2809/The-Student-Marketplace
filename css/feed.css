@@ -894,6 +894,9 @@ small {
     height: 120px;
     margin: -76px 0 0 -76px;
 }
+.dark .text-center {
+    color: var(--text-color);
+}
 
 .card.dark{
     background: linear-gradient(to top left, #3a3b3c, #3a3b3c);
