@@ -771,18 +771,20 @@ small {
         display: flex;
         min-width: 0;
         word-wrap: break-word;
-        background-color: #fff;
+        background-color: antiquewhite;
         background-clip: border-box;
-        border: 1px solid rgba(0, 0, 0, .125);
+        border: 8px solid rgba(18, 17, 17 );
         border-radius: 0.25rem;
         flex-direction: column;
         text-align: center;
         border-radius: 14px;
+        border-color: #bdab92;
     
 }
 .dark .card {
     background: #3c3d3f;
     color: var(--text-color);
+    border-color: #bdab92;;
 }
 .row {
     width: 100%;
@@ -805,8 +807,12 @@ small {
 .card .btn {
     width: 100%;
     margin-top: 10px;
+    background-color: aliceblue;
 }
 
+.card .btn:hover {
+    background-color: #ee5353;
+}
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -925,6 +931,8 @@ small {
     list-style: none;
     max-height: 300px;
     overflow-y: auto;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 
@@ -949,6 +957,7 @@ small {
     -o-transition: 0.2s ease all;
     transition: 0.2s ease all;
     cursor: pointer;
+    background-color: aliceblue;
 }
 
 .chat-btn:hover{
@@ -962,6 +971,7 @@ small {
     outline: none;
     border: 1px solid;
     text-align: center;
+    background-color: aliceblue;
 }
 
 .hidden {
