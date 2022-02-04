@@ -982,3 +982,38 @@ small {
 .hidden {
     display: none;
 }
+
+
+.search-box {
+    border-radius: 6px;
+    background-color: var(--primary-color-light);
+    cursor: pointer;
+    transition: var(--tran-05);
+    position: fixed;
+    bottom:0;
+    z-index: 1;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.search-box .icon {
+    position: absolute;
+    left: 10px;
+    margin-left: 8px;
+    font-size: 2rem;
+}
+
+.search-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color-light);
+    color: var(--text-color);
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: var(--tran-05);
+    text-indent: 60px;
+}
