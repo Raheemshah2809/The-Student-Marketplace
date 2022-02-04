@@ -194,7 +194,7 @@ function getdata() {
                     <ul class="messages">
                     </ul>
                     <form data-post-id="${key}" onsubmit="postChat(event)">
-                    <input class="chat-txt" maxlength="20" placeholder="Add Comment" type="text" required />
+                    <input class="chat-txt" maxlength="50" placeholder="Add Comment" type="text" required />
                     <button class="chat-btn" type="submit">Submit Comment</button>
                     </form>
                     </div>
