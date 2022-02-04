@@ -989,12 +989,15 @@ small {
     background-color: var(--primary-color-light);
     cursor: pointer;
     transition: var(--tran-05);
-    position: fixed;
+    position: sticky;
     bottom:0;
     z-index: 1;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 20px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-width: 1200px;
 }
 
 .search-box .icon {
