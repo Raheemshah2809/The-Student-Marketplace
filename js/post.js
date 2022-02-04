@@ -12,7 +12,7 @@ function upload(e) {
     }, function () {
         uploadTask.snapshot.ref.getDownloadURL().then(function (downloadURL) {
             const typeDeath = document.querySelector('#typeDeath').value;
-            const timestamp = document.querySelector('#timestamp').innerText;
+            const timestamp = new Date().now();
             const price = document.querySelector('#price').value;
             const userEmail = document.querySelector('#userEmail').innerText;
             const contact = document.querySelector('#contact').value;
