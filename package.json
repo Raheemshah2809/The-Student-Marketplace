@@ -1,0 +1,23 @@
+{
+  "name": "studentmarketplace",
+  "version": "1.0.0",
+  "description": "App for Dissertation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raheemshah2809/The-Student-Marketplace.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raheemshah2809/The-Student-Marketplace/issues"
+  },
+  "homepage": "https://github.com/Raheemshah2809/The-Student-Marketplace#readme",
+  "devDependencies": {
+    "electron": "^17.0.0"
+  }
+}
