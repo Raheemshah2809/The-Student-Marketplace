@@ -296,6 +296,13 @@ body.dark .switch::before {
     padding: 12px 60px;
 }
 
+.home .Warning {
+    font-size: 15px;
+    font-weight: 500;
+    color: red;
+    padding: 12px 60px;
+}
+
 .sidebar.close~.home {
     left: 78px;
     height: 100vh;
