@@ -12,10 +12,9 @@ if (!modal) {
             <h1>Created By:</h1>
             <div>Raheem</div>
             <br>
-            <div>Updates To The Site Will be Placed Here</div>
-            <div>ChangeLog: 0.2.6<br>
-            Added Chat Icon<br>
-            Chat Functionality Coming 0.2.7 <br>
+            <div>Updates To The Site Will be Placed Here</div><br>
+            <div>ChangeLog: 0.9.0<br>
+            Flutter App Almost Released<br>
             Fixed Bugs <br>
             Added Online Indicators <br>
             QOL To Post Page <br>
