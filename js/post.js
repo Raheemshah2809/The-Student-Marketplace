@@ -175,7 +175,7 @@ function getdata() {
             card.innerHTML = `
                 <div class="card" data-post-id="${key}">
                     <h4>Seller: <a href="mailto:${encodeURIComponent(value.userEmail)}
-                    ?subject=${encodeURIComponent(`I am Interested In Buying Your Item, The ${value.itemName ?? ''}`)}">${value.userEmail}</a></h4>
+                    ?subject=${encodeURIComponent(`I am Interested In Buying Your Item, The ${value.itemName ?? ''}`)} target="_blank">${value.userEmail}</a></h4>
                     
                     <h4>Type: ${value.isAlive}</h4>
                     <h4>Price: £${value.price}</h4>
@@ -187,7 +187,7 @@ function getdata() {
                     <br>
                     <h4 class="description">Description: <br> ${value.text}</p>
                     <br>
-                    <h4>Contact Details: <br> <a href="tel:${value.contact}">${value.contact}</a></h4>
+                    <h4>Contact Details: <br> <a href="tel:${value.contact}" target="_blank" >${value.contact}</a></h4>
                     <br>
                     <div class="chat">
                     <h4>Comment Section</h4>
