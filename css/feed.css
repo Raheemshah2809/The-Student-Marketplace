@@ -771,20 +771,20 @@ small {
         display: flex;
         min-width: 0;
         word-wrap: break-word;
-        background-color: antiquewhite;
+        background-color: white;
         background-clip: border-box;
         border: 8px solid rgba(18, 17, 17 );
         border-radius: 0.25rem;
         flex-direction: column;
         text-align: center;
         border-radius: 14px;
-        border-color: #bdab92;
+        border-color: teal;
     
 }
 .dark .card {
     background: #3c3d3f;
     color: var(--text-color);
-    border-color: #bdab92;;
+    border-color: teal;
 }
 .row {
     width: 100%;
