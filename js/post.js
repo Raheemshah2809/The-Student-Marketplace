@@ -173,7 +173,7 @@ function getdata() {
 
 
             card.innerHTML = `
-                <div class="card" data-post-id="${key}">
+                <div class="card" data-post-id="${key}" data-aos="fade-up" data-aos-duration="1500">
                     <h4>Seller: <a href="mailto:${encodeURIComponent(value.userEmail)}
                     ?subject=${encodeURIComponent(`I am Interested In Buying Your Item, The ${value.itemName ?? ''}`)} target="_blank">${value.userEmail}</a></h4>
                     
@@ -207,6 +207,7 @@ function getdata() {
 
             posts_div.prepend(card);
         }
+
     });
 
     post.once('value').then(function (snapshot) {

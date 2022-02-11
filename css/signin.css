@@ -327,8 +327,8 @@ body{
 }
 
 .alert .msg {
-    padding: 0 20px;
-    font-size: 12px;
+    padding: 0px;
+    font-size: 11px;
     color: #ce8500;
 }
 

@@ -154,18 +154,18 @@ a {
 	border: 1px solid teal;
 }
 
-.food {
+.section {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap
 }
 
-.food__large {
+.section__large {
 	margin: 0rem auto 8rem;
 	max-width: 130rem
 }
 
-.food__card {
+.section__card {
 	max-width: 38rem;
 	border-radius: 1rem;
 	margin: 0 2rem;
@@ -174,21 +174,21 @@ a {
 	border: 1px solid rgba(192, 192, 192, 0.4)
 }
 
-.food__img {
+.section__img {
 	width: 100%;
 	padding: 1rem;
 	margin-top: -5rem;
 	transition: 1s all
 }
 
-.food__img1 {
+.section__img1 {
 	width: 102px;
 	padding: 1rem;
 	margin-top: -5rem;
 	transition: 1s all
 }
 
-.food__title {
+.section__title {
 	padding: 2rem 0 0;
 	text-align: center;
 	font-family: "Gotham", Helvetica, Arial, sans-serif;
@@ -201,24 +201,25 @@ a {
 	transition: 1s all
 }
 
-.food .special {
+.section .special {
 	display: block;
 	font-family: "Gotham", Helvetica, Arial, sans-serif;
 	font-size: 5rem;
 	margin: 1rem 0;
-	line-height: 4rem
+	line-height: 4rem;
 }
 
-.food__desc {
+.section__desc {
 	font-family: "Gotham", Helvetica, Arial, sans-serif;
 	padding: 2rem;
 	color: #111;
 	font-size: 2rem;
 	min-height: 22rem;
-	transition: 1s all
+	transition: 1s all;
+	text-align: center;
 }
 
-.food__price {
+.section__price {
 	text-align: center;
 	font-family: "Gotham", Helvetica, Arial, sans-serif;
 	font-size: 3rem;
@@ -227,21 +228,21 @@ a {
 	/* margin-top: -8rem; */
 }
 
-.food__card:hover {
+.section__card:hover {
 	transform: translateY(-1rem) scale(0.95);
 	background: teal;
 	box-shadow: 0 1rem 4rem rgba(17, 17, 17, 0.5)
 }
 
-.food__card:hover h3 {
+.section__card:hover h3 {
 	color: #f8fffd
 }
 
-.food__card:hover p {
+.section__card:hover p {
 	color: #f8fffd
 }
 
-.food__card:hover img {
+.section__card:hover img {
 	transform: scale(1.2)
 }
 
@@ -485,7 +486,8 @@ a {
 	top: 0;
 	left: 0;
 	z-index: 5;
-	transition: 0.5s all
+	transition: 0.5s all;
+	padding: 10px;
 }
 
 .nav__wrapper {
@@ -581,28 +583,29 @@ a {
 	}
 
 	.header__title--secondary {
-		font-size: 3rem
+		font-size: 3rem;
+		padding: 10px;
 	}
 
-	.food__card {
+	.section__card {
 		background: teal;
 		box-shadow: 0 1rem 4rem rgba(17, 17, 17, 0.5);
 		transition: none !important
 	}
 
-	.food__card h3 {
+	.section__card h3 {
 		color: #f8fffd
 	}
 
-	.food__card p {
+	.section__card p {
 		color: #f8fffd
 	}
 
-	.food__card:hover {
+	.section__card:hover {
 		transform: none
 	}
 
-	.food__card:hover img {
+	.section__card:hover img {
 		transform: none
 	}
 

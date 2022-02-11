@@ -39,7 +39,7 @@ const authenticate = (email, password) => {
             // Handle Errors here.
             var errorCode = error.code;
             var errorMessage = error.message;
-            alert(errorMessage);
+            alert.setMessage(errorMessage);
         });
 };
 
