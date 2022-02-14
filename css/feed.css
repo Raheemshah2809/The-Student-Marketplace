@@ -898,7 +898,7 @@ body {
     font-family: helvetica, arial, sans-serif;
     text-transform: uppercase;
     font-weight: 900;
-    color: #ce4233;
+    color: teal;
     letter-spacing: 0.2em;
 }
 
@@ -908,7 +908,7 @@ body {
     display: block;
     width: 15px;
     height: 15px;
-    background: #ce4233;
+    background: teal;
     position: absolute;
     -webkit-animation: load 0.7s infinite alternate ease-in-out;
     animation: load 0.7s infinite alternate ease-in-out;
