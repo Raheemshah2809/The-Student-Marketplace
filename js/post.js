@@ -215,7 +215,7 @@ function getdata() {
         checkHasPosts();
 
         if (loader && !loader.classList.contains('hide')) loader.classList.add('hide');
-
+        
     });
 }
 
