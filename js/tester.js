@@ -4,7 +4,7 @@ const body = document.querySelector('body'),
     modeSwitch = body.querySelector(".toggle-switch"),
     modeText = body.querySelector(".mode-text");
 
-    let dark = localStorage.getItem('dark');
+let dark = localStorage.getItem('dark');
 
 
 toggle.addEventListener("click", () => {
@@ -24,12 +24,21 @@ modeSwitch.addEventListener("click", () => {
     }
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const theme = localStorage.getItem('theme');
-    if(theme) {
+    if (theme) {
         const toggleSwitcher = document.querySelector('.toggle-switch');
-        if(toggleSwitcher && theme === 'dark') {
+        if (toggleSwitcher && theme === 'dark') {
             toggleSwitcher.click();
         }
     }
 });
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+if (prefersDarkScheme.matches) {
+    document.body.classList.add("dark");
+} else {
+    document.body.classList.remove("dark");
+    
+}
+

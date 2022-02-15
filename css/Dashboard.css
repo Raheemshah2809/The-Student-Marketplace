@@ -44,7 +44,6 @@ body.dark {
     --toggle-color: #fff;
     --text-color: #ccc;
 }
-
 /* ===== Sidebar ===== */
 .sidebar {
     position: fixed;
@@ -579,3 +578,4 @@ small {
 .user-email {
     font-size: 16px;
 }
+
