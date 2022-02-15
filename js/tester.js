@@ -39,6 +39,33 @@ if (prefersDarkScheme.matches) {
     document.body.classList.add("dark");
 } else {
     document.body.classList.remove("dark");
-    
 }
 
+    
+    
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const prefersDarkScheme = e.matches ? "dark" : "light";
+        document.body.classList.toggle("dark", prefersDarkScheme === "dark");
+    });
+
+// const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+// window.matchMedia('(prefers-color-scheme: dark)').addEventListener(function (e) {
+//     if (prefersDarkScheme.matches) {
+//         document.body.classList.add("dark");
+//     } else {
+//         document.body.classList.remove("dark");
+    
+//     }
+// });
+
+
+
+// window.matchMedia('(prefers-color-scheme: dark)').addEventListener('theme', event => {
+//     const prefersDarkScheme = event.matches ? "dark" : "light";
+//     if (prefersDarkScheme.matches) {
+//         document.body.classList.add("dark");
+//     } else {
+//         document.body.classList.remove("dark");
+    
+//     }
+// });
