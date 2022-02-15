@@ -6,7 +6,6 @@ const body = document.querySelector('body'),
 
 let dark = localStorage.getItem('dark');
 
-
 toggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");
 })
@@ -41,9 +40,7 @@ if (prefersDarkScheme.matches) {
     document.body.classList.remove("dark");
 }
 
-    
-    
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
         const prefersDarkScheme = e.matches ? "dark" : "light";
         document.body.classList.toggle("dark", prefersDarkScheme === "dark");
     });
