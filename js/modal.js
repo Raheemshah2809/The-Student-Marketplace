@@ -13,14 +13,11 @@ if (!modal) {
             <div>Raheem</div>
             <br>
             <div>Updates To The Site Will be Placed Here</div><br>
-            <div>ChangeLog: 0.9.0<br>
-            Flutter App Almost Released<br>
-            Fixed Bugs <br>
-            Added Online Indicators <br>
-            QOL To Post Page <br>
-            QOL To Upload Page <br>
-            Fixed Sign Up Page <br>
-            Fixed Sidebar Missing Logo and Online Indicators <br>
+            <div>ChangeLog: 0.9.1<br>
+            PWA Installed And Running<br>
+            Feed Page Name Changed To Posts <br>
+            Added News Page <br>
+            Fixed Bugs  <br>
             </div>
             <br>
             </div>

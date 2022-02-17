@@ -1,3 +1,214 @@
+.head-line-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.icon-button {
+    padding: 8px 9px 9px;
+    margin-top: 5px;
+}
+
+
+
+.hide {
+    display: none;
+}
+
+.head-line {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.dark .head-line {
+    color: #fff;
+}
+
+.head-line svg {
+    width: 430px;
+    margin: 0px 20px;
+}
+
+.dark .icons {
+    color: white;
+    cursor: pointer;
+}
+
+.menus {
+    display: flex;
+    justify-content: center;
+    padding: 5px 0 4px;
+    flex-wrap: wrap;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 4px double black;
+}
+
+
+
+.menus button {
+    margin: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.dark .menus button {
+    margin: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+
+.menus button:hover {
+    background-color: #721c24;
+    border-radius: 3px;
+}
+
+.news-img {
+    max-width: 100%;
+    max-height: 250px;
+    margin-right: 1em;
+    text-align: center;
+}
+
+.news {
+    padding: 1em;
+    border-bottom: 2px solid black;
+    background: aliceblue;
+    text-align: center;
+}
+
+.title {
+    font-size: 20pt;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    margin-top: 2em;
+}
+
+.title:hover {
+    text-decoration: underline;
+    color: #721c24;
+}
+
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #E4E9F7;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+
+.side-menu-list button {
+    margin: 5px;
+    border: none;
+    background: none;
+    width: 120px;
+    cursor: pointer;
+}
+
+.dark .side-menu-list button {
+    margin: 5px;
+    border: none;
+    background: none;
+    width: 120px;
+    cursor: pointer;
+    color: white;
+}
+
+.side-menu .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    border: none;
+    background: none;
+}
+
+.side-menu-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dark .side-menu {
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.side-menu-list button:hover {
+    background-color: #721c24;
+    
+}
+
+
+
+.search-button {
+    background-color: #E4E9F7;
+    border: 1px solid #E4E9F7;
+    color: rgb(255, 255, 255);
+    height: 33px;
+    border-radius: 3px;
+}
+
+#search-input {
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 3px;
+    height: 33px;
+}
+
+#input-area {
+    display: none;
+}
+
+@media screen and (max-width:63rem) {
+    .hide {
+        display: inline;
+    }
+
+    .menus {
+        display: none;
+    }
+}
+
+.pagination-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    margin-top: 1em;
+}
+
+.page-item.active .page-link {
+    background-color: #E4E9F7;
+    color: white;
+    border-color: #E4E9F7;
+}
+
+.page-link {
+    color: #E4E9F7;
+}
+
+.col-lg-8 {
+    margin-top: 1em;
+}
+
 /* Google Font Import - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
@@ -44,6 +255,7 @@ body.dark {
     --toggle-color: #fff;
     --text-color: #ccc;
 }
+
 /* ===== Sidebar ===== */
 .sidebar {
     position: fixed;
@@ -58,7 +270,7 @@ body.dark {
 }
 
 .sidebar.close {
-    width: 88px;
+    width: 90px;
 }
 
 /* ===== Reusable code - Here ===== */
@@ -355,7 +567,7 @@ a {
     justify-content: center;
     align-items: center;
     height: 37vh;
-    padding: 0px 60px;
+    padding: 0px 30px;
 }
 
 
@@ -546,7 +758,7 @@ small {
     width: 160px;
     background: var(--body-color);
     background: transparent;
-    
+
 }
 
 .onoffswitch3-inactive {
@@ -578,7 +790,7 @@ small {
 
 .scroll-text2 {
     color: red;
-    width: calc(100% - 130px);
+    width: calc(100% - 160px);
     float: right;
 }
 
@@ -586,3 +798,6 @@ small {
     font-size: 16px;
 }
 
+.desc1{
+    margin: 1em;
+}
