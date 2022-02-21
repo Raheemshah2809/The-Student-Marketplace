@@ -97,7 +97,7 @@ const render = () => {
     document.getElementById("news-board").innerHTML = resultHTML;
 };
 
-const renderPagination = () => {
+const renderPagination = () => { 
     let paginationHTML = ``;
     let pageGroup = Math.ceil(page / 5);
     let last = pageGroup * 5;
@@ -127,7 +127,7 @@ const renderPagination = () => {
   <a class="page-link" href='#js-bottom'>&gt;&gt;</a>
 </li>`;
     }
-    document.querySelector(".pagination").innerHTML = paginationHTML;
+    document.querySelector("ul.pagination").innerHTML = paginationHTML;
 };
 
 
