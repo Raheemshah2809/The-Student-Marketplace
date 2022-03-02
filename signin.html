@@ -11,7 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="https://img.icons8.com/color/48/000000/login-rounded-right.png"/>
-    <script defer src="https://progressier.com/client/script.js?id=oAfWiCUiIs83YxdUKyoN"></script> 
+    <!-- <script defer src="https://progressier.com/client/script.js?id=oAfWiCUiIs83YxdUKyoN"></script>  -->
 </head>
 
 <body>
@@ -30,11 +30,13 @@
         <button id="show-login">Already Got An Account? Sign In Here</button>
         <h3>Welcome Please Confirm Your Email and A Password Rest Form Will Be Sent To Your Valid .AC.UK Email</h3>
         <h3>Sign Up</h3>
-        Email <br />
+        Email <span class="tooltip" data-tooltip="Enter A Valid.AC.UK Email, Then Check Your Email To Verify Your Account, It Will Ask You To Change Your Password.">?</span>
+
         <input type="email" id="registration-email" required /><br />
-        Confirm Email <br />
+        Confirm Email 
+        <br>
         <input type="email" id="registration-reemail" autocomplete="enabled" required /><br />
-        <br />
+        <br>
         <button id="register">Sign Up</button>
         <br>
         <button onclick="location.href='/index.html'">Home</button>
@@ -44,14 +46,14 @@
       <div id="login-page">
         <button id="show-register">New? Click Me To Sign Up</button> 
         <h3> Sign In With Your Username And Password To Get Started</h3>
-        Email <br />
-        <input type="email" id="login-email" /><br />
-        Password <br />
-        <input type="password" id="login-password" /><br />
+        Email <span class="tooltip2" data-tooltip="Enter Your Valid .AC.UK Email">?</span>  <br>
+        <input type="email" id="login-email"/><br>
+        Password <span class="tooltip2" data-tooltip="6 characters and a mix of letters and numbers">?</span>  <br>
+        <input type="password" id="login-password" /><br>
         <br>
         <button id="login">Sign In</button>
         <br>
-        <button id="forgot-password">Forgot Password? Click Me To Reset</button>
+        <button id="forgot-password">Forgot Password? Click Me To Reset</button>  
         <br>
         <button onclick="location.href='/index.html'">Home</button>
       </div>
@@ -72,3 +74,7 @@
 </body>
 
 </html>
+
+
+
+

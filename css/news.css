@@ -17,8 +17,9 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 20px;
+    margin-bottom: 3px;
+    font-size: 14px;
+    text-align: center;
 }
 
 .dark .head-line {
@@ -28,6 +29,10 @@
 .head-line svg {
     width: 430px;
     margin: 0px 20px;
+}
+
+.icons{
+    text-align: center;
 }
 
 .dark .icons {
@@ -79,6 +84,38 @@
     border-bottom: 2px solid black;
     background: aliceblue;
     text-align: center;
+}
+
+.dark .news  {
+    padding: 1em;
+    border-bottom: 2px solid black;
+    background: #212529;
+    text-align: center;
+}
+
+.dark .title {
+    color: white;
+}
+
+.date{
+    color: black;
+}
+
+.dark .date{
+    color: white;
+}
+
+
+.news-board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+.dark .col-lg-8{
+    color: white;
 }
 
 .title {
@@ -182,6 +219,7 @@
     border: 1px solid rgb(226, 226, 226);
     border-radius: 3px;
     height: 33px;
+    text-align: center;
 }
 
 #input-area {

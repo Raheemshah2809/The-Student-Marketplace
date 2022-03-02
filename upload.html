@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon"
-        href="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-upload-interface-kiranshastry-gradient-kiranshastry.png"/>
+        href="https://img.icons8.com/external-kiranshastry-gradient-kiranshastry/64/000000/external-upload-interface-kiranshastry-gradient-kiranshastry.png" />
 
     <!----======== CSS ======== -->
     <link rel="stylesheet" href="/css/post.css">
@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script defer src="https://progressier.com/client/script.js?id=oAfWiCUiIs83YxdUKyoN"></script> 
+    <!-- <script defer src="https://progressier.com/client/script.js?id=oAfWiCUiIs83YxdUKyoN"></script>  -->
     <title>Create Your Post</title>
 </head>
 
@@ -115,7 +115,7 @@
         </div>
 
     </nav>
-    
+
     <section class="home animate__animated animate__fadeInDownBig">
         <div class="text">Create Your Post</div>
         </div>
@@ -131,59 +131,73 @@
                     <form id="post-form" action="#" onsubmit="upload(event)">
                         <div class="wrapper">
                             <div id="status"></div>
-                                <div class="result">
-                                    <label>Time:</label>
-                                    <div id="timestamp"></div>
-                                </div>
+                            <div class="result">
+                                <label>Time:</label>
+                                <div id="timestamp"></div>
                             </div>
-                            <br>
-                            <h4 class="alive1">Select If It Is A Good Or Service</h4>
-                            <select id="livingStatus" class="dropdown" required>
-                                <option value="Goods" selected>Goods</option>
-                                <option value="Services">Service</option>
-                            </select>
-                            <br>
-                            <br>
-                            <h4 class="price">Enter Item Name</h4>
-                            <input type="text" id="itemName" class="form-control2" placeholder="Add A Correct Item Name" maxlength="30" required></input>
-                            <br>
-                            <br>
-                            <h4 class="price">Enter A Price</h4>
-                            <h6 class="price">Maximum Value £2500</h6>
-                            <input type="number" min="1" max="2500"  id="price" class="price-control" placeholder="£ Price"required>
-                            <br>
-                            <br>
-                            <h4 class="alive1">Condition</h4>
-                            <select id="typeDeath" class="dropdown" required>
-                                <option value="Not Sure" selected>Not Applicable</option>
-                                <option value="New" selected>New</option>
-                                <option value="Used - Like New" selected>Used - Like New</option>
-                                <option value="Used - Good">Used - Good</option>
-                                <option value="Used - Fair">Used - Fair</option>
-                            </select>
-                            <br>
-                            <br>
-                            <h4 class="price">Enter A Detailed Description</h4>
-                            <textarea id="post" class="form-control" placeholder="Add A Description" required></textarea>
-                            <br>
-                            <h4 class="price">Add Your Phone Number Here</h4>
-                            <input type="tel" id="contact" class="form-control2" placeholder="+44-123-456-789" pattern="^\d{11}$"
-                            maxlength="15" required></input>
-                            <br>
                         </div>
-                        <md-button>
-                            
-                                <div class="fileselect">    
-                                    <input type="file" class="fileuploader" id="image" accept="image/*;capture=camera" (change)="getFile(e)"  required>
-                                    
-                                </div>
                         <br>
-                        <div class="text-center">
-                            <button type="submit" class="btn btn-success">Upload</button>
-                        </div>
-                    </form>
+                        <h4 class="alive1">Select If It Is A Good Or Service</h4>
+                        <select id="livingStatus" class="dropdown" required>
+                            <option value="Goods" selected>Goods</option>
+                            <option value="Services">Service</option>
+                        </select>
+                        <br>
+                        <br>
+                        <h4 class="price">Enter Item Name</h4>
+                        <input type="text" id="itemName" class="form-control2" placeholder="Add A Correct Item Name"
+                            maxlength="30" required></input>
+                        <br>
+                        <br>
+                        <h4 class="price">Enter A Price</h4>
+                        <h6 class="price">Maximum Value £2500</h6>
+                        <input type="number" min="1" max="2500" id="price" class="price-control" placeholder="£ Price"
+                            required>
+                        <br>
+                        <br>
+                        <h4 class="alive1">Condition</h4>
+                        <select id="typeDeath" class="dropdown" required>
+                            <option value="Not Sure" selected>Not Applicable</option>
+                            <option value="New" selected>New</option>
+                            <option value="Used - Like New" selected>Used - Like New</option>
+                            <option value="Used - Good">Used - Good</option>
+                            <option value="Used - Fair">Used - Fair</option>
+                        </select>
+                        <br>
+                        <br>
+                        <h4 class="price">Enter A Detailed Description</h4>
+                        <textarea id="post" class="form-control" placeholder="Add A Description" required></textarea>
+                        <br>
+                        <h4 class="price">Add Your Phone Number Here</h4>
+                        <input type="tel" id="contact" class="form-control2" placeholder="+44-123-456-789"
+                            pattern="^\d{11}$" maxlength="15" required></input>
+                        <br>
                 </div>
+                <md-button>
+
+                    <!-- <div class="fileselect">
+                        <div class="file-select-button" id="image">Choose File</div>
+                        <input type="file" class="fileuploader" id="image" >
+
+                    </div> -->
+
+
+                    <div class="file-upload">
+                        <div class="file-select">
+                            <div class="file-select-button" id="image">Choose File</div>
+                            <div class="file-select-name" id="noFile">No file chosen...</div>
+                            <input type="file" name="chooseFile" id="chooseFile">
+                        </div>
+                    </div>
+
+
+                    <br>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-success">Upload</button>
+                    </div>
+                    </form>
             </div>
+        </div>
         </div>
         <br>
         <br>
@@ -192,10 +206,36 @@
         <div id="myProgress">
             <div id="myBar"></div>
         </div>
-    </div>
+        </div>
 
         </main>
     </section>
+    <script type="text/javascript">
+        function validateFileType(){
+            var fileName = document.getElementById("chooseFile").value;
+            var idxDot = fileName.lastIndexOf(".") + 1;
+            var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+            if (extFile=="jpg" || extFile=="jpeg" || extFile=="png"){
+                //TO DO
+            }else{
+                alert("Only jpg/jpeg and png files are allowed!");
+            }   
+        }
+    </script>
+    <script>
+        $('#chooseFile').bind('change', function () {
+      var filename = $("#chooseFile").val();
+      if (/^\s*$/.test(filename)) {
+        $(".file-upload").removeClass('active');
+        $("#noFile").text("No file chosen..."); 
+      }
+      else {
+        $(".file-upload").addClass('active');
+        $("#noFile").text(filename.replace("C:\\fakepath\\", "")); 
+      }
+    });
+    
+    </script>
     <script src="js/firebase-app-compat.js"></script>
     <script src="js/firebase-storage-compat.js"></script>
     <script src="js/firebase-analytics-compat.js"></script>

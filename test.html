@@ -1,75 +1,35 @@
-<main>
-    <section class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="header1">Zap App</h1>
-                <p id="Update" style="text-align: center; font-weight: bold">I'm not sure yet!</p>
-            </div>
-    </section>
-    <div class="container mt-2">
-        <div class="card">
-            <h3>Document Your Find</h3>
-            <div class="card-body">
-                <form id="post-form">
-                    <h3>Location</h3>
-                    <div class="wrapper">
-                        <div id="status"></div>
-                        <!-- <div class="results">
-                            <div class="result">
-                                <label>Accuracy</label>
-                                <div id="accuracy"></div>
-                            </div>
-                            <div class="result">
-                                <label>Latitude</label>
-                                <div id="latitude"></div>
-                            </div>
-                            <div class="result">
-                                <label>Longitude</label>
-                                <div id="longitude"></div>
-                            </div>
-                            <div class="result">
-                                <label>Timestamp</label>
-                                <div id="timestamp"></div>
-                            </div>
-                        </div> -->
-                        <br>
-                        <h4 class="alive1">Select If The Animal Is Dead Or Alive</h4>
-                        <select id="livingStatus" class="dropdown" required>
-                            <option value="Alive" selected>Alive</option>
-                            <option value="Dead">Dead</option>
-                        </select>
-                        <br>
-                        <br>
-                        <h4 class="alive1">Type Of Mortality</h4>
-                        <select id="typeDeath" class="dropdown" required>
-                            <option value="Not Sure" selected>Not Applicable</option>
-                            <option value="Death: Natural" selected>Natural</option>
-                            <option value="Death: Road" selected>Road Death</option>
-                            <option value="Death: Electrocution">Fence Death: Electrocution</option>
-                            <option value="Death: Non-Electrocution">Fence Death: Non-Electrocution</option>
-                            <option value="Death: Burning">Burning</option>
-                            <option value="Death: Other">Other</option>
-                        </select>
-                        <br>
-                        <br>
-                        <textarea id="post" class="form-control" required
-                            placeholder="If Other Please State How If Not Please Type N/A"></textarea>
-                        <input type="file" class="form-control" id="image" accept="images/*">
-                        <br>
-                        <br>
-                        <br>
-                        <div class="text-center">
-                            <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
-                        </div>
-                        <br>
-                        <div id="myProgress">
-                            <div id="myBar"></div>
-                        </div>
-                </form>
-            </div>
-        </div>
-        <div class="row mt-4" id="posts">
-        </div>
-    </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="test.css">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
 
-</main>
+<div class="file-upload">
+  <div class="file-select">
+    <div class="file-select-button" id="fileName">Choose File</div>
+    <div class="file-select-name" id="noFile">No file chosen...</div> 
+    <input type="file" name="chooseFile" id="chooseFile">
+  </div>
+</div>
+<script>
+    $('#chooseFile').bind('change', function () {
+  var filename = $("#chooseFile").val();
+  if (/^\s*$/.test(filename)) {
+    $(".file-upload").removeClass('active');
+    $("#noFile").text("No file chosen..."); 
+  }
+  else {
+    $(".file-upload").addClass('active');
+    $("#noFile").text(filename.replace("C:\\fakepath\\", "")); 
+  }
+});
+
+</script>
+</body>
+</html>

@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
 
-body{
+body {
     height: 100vh;
-	background: linear-gradient(to left bottom, rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.8)), url(/images/Backgroundforboot.jpeg);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: bottom center;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+    background: linear-gradient(to left bottom, rgba(17, 17, 17, 0.5), rgba(17, 17, 17, 0.8)), url(/images/Backgroundforboot.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -47,6 +47,7 @@ body{
     padding: 10px;
     box-sizing: border-box;
     border-radius: 3px;
+    margin-top: 10px;
 }
 
 .forms-in button {
@@ -352,14 +353,15 @@ body{
     line-height: 40px;
 }
 
-.title1{
+.title1 {
     font-size: 25px;
     font-weight: bold;
     font-family: Poppins, sans-serif;
     color: turquoise;
     text-align: center;
 }
-.title2{
+
+.title2 {
     font-size: 20px;
     font-weight: bold;
     font-family: Poppins, sans-serif;
@@ -368,7 +370,8 @@ body{
     position: relative;
     bottom: 18px;
 }
-.title3{
+
+.title3 {
     font-size: 20px;
     font-weight: bold;
     font-family: Poppins, sans-serif;
@@ -378,7 +381,7 @@ body{
     top: 530px;
 }
 
-.title4{
+.title4 {
     font-size: 20px;
     font-weight: bold;
     font-family: Poppins, sans-serif;
@@ -388,7 +391,125 @@ body{
     top: 453px;
 }
 
-.center-align{
+.center-align {
     display: block;
     margin: 0 auto;
+}
+
+.tooltip {
+    position: relative;
+    background: #ff3466;
+    padding: 3px 9px;
+    margin: 5px;
+    font-size: 15px;
+    border-radius: 100%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.tooltip:before,
+.tooltip:after {
+    position: absolute;
+    content: "";
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.tooltip:before {
+    border-width: 10px 8px 0 8px;
+    border-style: solid;
+    border-color: #ff3466 transparent transparent transparent;
+    top: -15px;
+    transform: translateY(20px);
+}
+
+.tooltip:after {
+    content: attr(data-tooltip);
+    background: #ff3466;
+    width: 160px;
+    height: 88px;
+    font-size: 13px;
+    font-weight: 300;
+    top: -122px;
+    left: -10px;
+    padding: 10px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transform: translateY(20px);
+}
+
+.tooltip:hover::before,
+.tooltip:hover::after {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(2deg);
+    }
+
+    50% {
+        transform: rotate(-3deg);
+    }
+
+    70% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#anim:hover {
+    animation: shake 500ms ease-in-out forwards;
+}
+
+.tooltip2 {
+    position: relative;
+    background: #ff3466;
+    padding: 3px 9px;
+    margin: 5px;
+    font-size: 15px;
+    border-radius: 100%;
+    color: #fff;
+    cursor: pointer;
+}
+
+.tooltip2:before,
+.tooltip2:after {
+    position: absolute;
+    content: "";
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.tooltip2:before {
+    border-width: 10px 8px 0 8px;
+    border-style: solid;
+    border-color: #ff3466 transparent transparent transparent;
+    top: -15px;
+    transform: translateY(20px);
+}
+
+.tooltip2:after {
+    content: attr(data-tooltip);
+    background: #ff3466;
+    width: 160px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    top: -74px;
+    left: -10px;
+    padding: 10px;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transform: translateY(20px);
+}
+
+.tooltip2:hover::before,
+.tooltip2:hover::after {
+    opacity: 1;
+    transform: translateY(-2px);
 }

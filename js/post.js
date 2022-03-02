@@ -1,6 +1,6 @@
 function upload(e) {
     e.preventDefault();
-    var image = document.getElementById('image').files[0];
+    var image = document.getElementById('chooseFile').files[0];
     var post = document.getElementById('post').value;
     var imageName = image.name;
     var storageRef = firebase.storage().ref('images/' + imageName);
