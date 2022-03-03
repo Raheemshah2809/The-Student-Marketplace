@@ -33,7 +33,8 @@ function upload(e) {
                 if (error) {
                     alert("Error while uploading");
                 } else {
-                    alert.setMessage("Successfully uploaded");
+                    alert.success("Successfully uploaded"); 
+                    
                     document.getElementById('post-form').reset();
                     location.href = '/feed.html';
                 }

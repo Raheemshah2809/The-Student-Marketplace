@@ -926,172 +926,113 @@ form {
     color: black;
 }
 
+
+.alert.alert-warning {
+    border-left-color: #ffa502;
+}
+
+.alert.alert-warning :is(.fa-exclamation-circle, .msg, .fas, .fa-times) {
+    color: #ce8500 !important;
+}
+
+.alert.alert-warning .close-btn {
+    background:#ffd080;
+}
+
+.alert.alert-success {
+    border-left-color: #3fa46a;
+}
+
+.alert.alert-success :is(.fa-exclamation-circle, .msg, .fas, .fa-times) {
+    color: #3fa46a !important;
+}
+
+.alert.alert-success .close-btn {
+    background:#d4f4d7;
+}
+
+.alert {
+    padding: 20px 40px;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    border-radius: 4px;
+    border-left: 8px solid transparent;
+    overflow: hidden;
+    opacity: 0;
+    font-family: Poppins, sans-serif;
+    text-align: center;
+    background-color: #e8f8ff;
+}
+
 @media screen and (min-width: 320px) {
     .alert {
-        padding: 20px 40px;
         width: 69%;
-        position: absolute;
-        right: 0;
         top: 75px;
-        border-radius: 4px;
-        border-left: 8px solid #ffa502;
-        overflow: hidden;
-        opacity: 0;
-        font-family: Poppins, sans-serif;
-        text-align: center;
-        background-color: #e8f8ff;
     }
 }
 
 
 @media screen and (min-width: 600px) {
     .alert {
-        padding: 20px 40px;
         width: 80%;
-        position: absolute;
-        right: 0;
         top: 10px;
-        border-radius: 4px;
-        border-left: 8px solid #ffa502;
-        overflow: hidden;
-        opacity: 0;
-        font-family: Poppins, sans-serif;
-        text-align: center;
     }
 }
 
 @media screen and (min-width: 425px) {
     .alert {
-        padding: 20px 40px;
         width: 74%;
-        position: absolute;
-        right: 0;
         top: 80px;
-        border-radius: 4px;
-        border-left: 8px solid #ffa502;
-        overflow: hidden;
-        opacity: 0;
-        font-family: Poppins, sans-serif;
-        text-align: center;
-        background-color: #e8f8ff;
     }
 }
 
 @media screen and (min-width: 360px) {
     .alert {
-        padding: 20px 40px;
         width: 72%;
-        position: absolute;
-        right: 0;
         top: 90px;
-        border-radius: 4px;
-        border-left: 8px solid #ffa502;
-        overflow: hidden;
-        opacity: 0;
-        font-family: Poppins, sans-serif;
-        text-align: center;
-        background-color: #e8f8ff;
     }
 }
 
 @media screen and (min-width: 768px) {
     .alert {
-        padding: 20px 40px;
         width: 87%;
-        position: absolute;
-        right: 0;
         top: 10px;
-        border-radius: 4px;
-        border-left: 8px solid #ffa502;
-        overflow: hidden;
-        opacity: 0;
-        font-family: Poppins, sans-serif;
-        text-align: center;
     }
 }
 
 @media screen and (min-width: 916px) {
     .alert {
-        padding: 20px 40px;
         width: 89%;
-        position: absolute;
-        right: 0;
         top: 10px;
-        border-radius: 4px;
-        border-left: 8px solid #ffa502;
-        overflow: hidden;
-        opacity: 0;
-        font-family: Poppins, sans-serif;
-        text-align: center;
-        background-color: #e8f8ff;
     }
 }
 
 @media screen and (min-width: 512px) {
     .alert {
-        padding: 20px 40px;
         width: 87%;
-        position: absolute;
-        right: 0;
         top: 10px;
-        border-radius: 4px;
-        border-left: 8px solid #ffa502;
-        overflow: hidden;
-        opacity: 0;
-        font-family: Poppins, sans-serif;
-        text-align: center;
-        background-color: #e8f8ff;
     }
 }
 
 @media screen and (min-width: 412px) {
     .alert {
-        padding: 20px 40px;
         width: 80%;
-        position: absolute;
-        right: 0;
         top: 80px;
-        border-radius: 4px;
-        border-left: 8px solid #ffa502;
-        overflow: hidden;
-        opacity: 0;
-        font-family: Poppins, sans-serif;
-        text-align: center;
-        background-color: #e8f8ff;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .alert {
-        padding: 20px 40px;
         width: 90%;
-        position: absolute;
-        right: 0;
         top: 75px;
-        border-radius: 4px;
-        border-left: 8px solid #ffa502;
-        overflow: hidden;
-        opacity: 0;
-        font-family: Poppins, sans-serif;
-        text-align: center;
-        background-color: #e8f8ff;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .alert {
-        padding: 20px 40px;
         width: 93%;
-        position: absolute;
-        right: 0;
         top: 55px;
-        border-radius: 4px;
-        border-left: 8px solid #ffa502;
-        overflow: hidden;
-        opacity: 0;
-        font-family: Poppins, sans-serif;
-        text-align: center;
-        background-color: #e8f8ff;
     }
 }
 
@@ -1152,14 +1093,14 @@ form {
     left: 20px;
     top: 50%;
     transform: translateY(-50%);
-    color: #ce8500;
+    color: transparent;
     font-size: 30px;
 }
 
 .alert .msg {
     padding: 0 20px;
     font-size: 18px;
-    color: #ce8500;
+    color: transparent;
 }
 
 .alert .close-btn {
@@ -1167,7 +1108,7 @@ form {
     right: 0px;
     top: 50%;
     transform: translateY(-50%);
-    background: #ffd080;
+    background: transparent;
     padding: 20px 18px;
     cursor: pointer;
 }
@@ -1177,7 +1118,7 @@ form {
 }
 
 .alert .close-btn .fas {
-    color: #ce8500;
+    color: transparent;
     font-size: 22px;
     line-height: 40px;
 }

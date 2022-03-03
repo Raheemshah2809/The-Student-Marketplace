@@ -1,11 +1,17 @@
 const alert = (function(){
 
     const Alert = () => {
+        
+        const alertType = {
+            success: 'alert-success',
+            warning: 'alert-warning',
+        }
+
         let alertBox = document.getElementById('alert-box');
         if(!alertBox) {
             const parent = document.createElement('div');
             parent.id = "alert-box";
-            parent.classList.add('alert', 'hide');
+            parent.classList.add('alert', 'hide', alertType.warning);
             
             const exclamation = document.createElement('span');
             exclamation.classList.add('fas', 'fa-exclamation-circle');
@@ -36,7 +42,9 @@ const alert = (function(){
                 alertBox.classList.add('hide');
             });
         }
-    
+
+        const msgSpan = alertBox.querySelector('.msg');
+
         const show = () => {
             alertBox.classList.remove('hide');
             alertBox.classList.add('show');
@@ -47,11 +55,41 @@ const alert = (function(){
             alertBox.classList.add('hide');
         }
         
+        const removeClass = (className) => {
+            if(alertBox.classList.contains(className)) {
+                alertBox.classList.remove(className);
+            }
+        }
+
+        const addClass = (className) => {
+            if(!alertBox.classList.contains(className)) {
+                alertBox.classList.add(className);
+            }
+        }
+
+        const success = (msg) => {
+            removeClass(alertType.warning);
+            addClass(alertType.success);   
+            setMessage(msg);
+        }
+
+        const warning = (msg) => {
+            removeClass(alertType.success);
+            addClass(alertType.warning);
+            setMessage(msg);
+        }
+
+        const toggle = () => {
+            alertBox.classList.contains('show') ? hide() : show();
+        }
+
         const setMessage = (msg) => {
-            const msgSpan = alertBox.querySelector('.msg');
+        
             hide();
+            
             if(msgSpan) {
                 msgSpan.innerHTML = msg;
+
                 show();
             //     const timeout = setTimeout(() => {
             //         hide();
@@ -73,7 +111,9 @@ const alert = (function(){
             show,
             hide,
             onClose,
-            setMessage
+            success,
+            warning,
+            toggle
         }
     }
 
