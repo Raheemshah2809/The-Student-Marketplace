@@ -160,6 +160,7 @@
     width: 120px;
     cursor: pointer;
     color: white;
+    font-size: 12px;
 }
 
 .side-menu .closebtn {
@@ -344,7 +345,7 @@ body.dark {
 }
 
 .sidebar.close {
-    width: 90px;
+    width: 95px;
 }
 
 /* ===== Reusable code - Here ===== */

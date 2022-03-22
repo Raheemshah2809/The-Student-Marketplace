@@ -1,5 +1,4 @@
-
-const API_KEY = "bWiVzsuqFO4SNtV2ZRlIrH2F8MzazCPv4cqUuiCSQG4";
+const API_KEY = "6qLeoBRkzpc0tcGYh10x9A5uRDYahWqGDGrsDOqrInU";
 let articles = [];
 let page = 1;
 let totalPage = 1;
@@ -18,7 +17,7 @@ const getNews = async () => {
         url.searchParams.set("page", page);
         let response = await fetch(url, {
             headers: header
-        }); 
+        });
         let data = await response.json();
         if (response.status == 200) {
             if (data.total_hits == 0) {
@@ -34,7 +33,7 @@ const getNews = async () => {
             throw new Error(data.message);
         }
 
-    } catch (e) {
+    } catch (error) {
         console.log("error object", error.name);
         errorRender(error.message)
     }
@@ -97,7 +96,7 @@ const render = () => {
     document.getElementById("news-board").innerHTML = resultHTML;
 };
 
-const renderPagination = () => { 
+const renderPagination = () => {
     let paginationHTML = ``;
     let pageGroup = Math.ceil(page / 5);
     let last = pageGroup * 5;
@@ -145,4 +144,3 @@ const errorRender = (message) => {
     document.getElementById("news-board").innerHTML = `<h3 class="text-center alert alert-danger mt-1">${message}</h3>`;
 };
 getLatestNews();
-
