@@ -96,11 +96,11 @@ verification/ password rest email is sent to their account so that they can ente
 
 ### **_Upcoming Features_**
 Here is a list of upcoming features that are being worked on. 
-- Add a feature to let users know what uni they have come from to see if it's far or not for pick up or collection.
-- Remove animations from the index page, as it lags the page when loading and it does not look clean.
-- Style Search bar on New page.
-- Fix Highlight on news page and sidebar (hover elements).
-- Successful Upload Color To Green (currently orange).
+- Add a feature to let users know what uni they have come from to see if it's far or not for pick up or collection. (Starting Soon)
+- Remove animations from the index page, as it lags the page when loading and it does not look clean. (Done)
+- Style Search bar on New page. (Doing)
+- Fix Highlight on news page and sidebar (hover elements). (Doing)
+- Successful Upload Color To Green (currently orange). (Done)
 
 **_A Trello board was created to keep on top of features and stuff I was doing so I don't lose track._**
 - Here is a link (https://github.com/Raheemshah2809/The-Student-Marketplace/projects/1)
