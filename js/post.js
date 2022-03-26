@@ -17,6 +17,7 @@ function upload(e) {
             const userEmail = document.querySelector('#userEmail').innerText;
             const contact = document.querySelector('#contact').value;
             const itemName = document.querySelector('#itemName').value;
+            const uniName = document.querySelector('#uniName').value;
 
             firebase.database().ref('thepost/').push().set({
                 text: post,
@@ -27,6 +28,7 @@ function upload(e) {
                 userEmail: userEmail,
                 contact: contact,
                 price: price,
+                uniName: uniName,
                 itemName: itemName,
                 isAlive: document.querySelector('#livingStatus').value,
             }, function (error) {
@@ -179,6 +181,7 @@ function getdata() {
                     ?subject=${encodeURIComponent(`I am Interested In Buying Your Item, The ${value.itemName ?? ''}`)} target="_blank">${value.userEmail}</a></h4>
                     
                     <h4>Type: ${value.isAlive}</h4>
+                    <h4>University: ${value.uniName}</h4>
                     <h4>Price: £${value.price}</h4>
                     <h4>Upload Date: <br> ${value.timestamp} </h4>
                     <h4>Condition: ${value.typeDeath} </h4>
