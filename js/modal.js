@@ -13,11 +13,12 @@ if (!modal) {
             <div>Raheem</div>
             <br>
             <div>Updates To The Site Will be Placed Here</div><br>
-            <div>ChangeLog: 0.9.1<br>
+            <div>ChangeLog: 0.9.12<br>
             PWA Installed And Running<br>
             Feed Page Name Changed To Posts <br>
             Added News Page <br>
             Fixed Bugs  <br>
+            Added University Options <br>
             </div>
             <br>
             </div>
