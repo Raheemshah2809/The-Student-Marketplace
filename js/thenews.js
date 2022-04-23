@@ -1,4 +1,4 @@
-const API_KEY = "6qLeoBRkzpc0tcGYh10x9A5uRDYahWqGDGrsDOqrInU";
+const API_KEY = "hgcTxesb9FhzDsYONwt59RCMGp7ySuS4fr8HhMFxFec";
 let articles = [];
 let page = 1;
 let totalPage = 1;

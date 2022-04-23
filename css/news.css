@@ -877,3 +877,7 @@ small {
 .desc1{
     margin: 1em;
 }
+
+.dark .result{
+    color: var(--text-color)
+}
