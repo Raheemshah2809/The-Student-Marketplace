@@ -4,7 +4,7 @@ const body = document.querySelector('body'),
     modeSwitch = body.querySelector(".toggle-switch"),
     modeText = body.querySelector(".mode-text");
 
-let dark = localStorage.getItem('dark');
+let dark = localStorage.getItem('dark'); 
 
 toggle.addEventListener("click", () => {
     sidebar.classList.toggle("close");
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const theme = localStorage.getItem('theme');
     if (theme) {
         const toggleSwitcher = document.querySelector('.toggle-switch');
-        if (toggleSwitcher && theme === 'dark') {
+        if (toggleSwitcher && theme === 'light') {
             toggleSwitcher.click();
         }
     }
