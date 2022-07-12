@@ -12,13 +12,13 @@ if (!modal) {
             <h1>Created By:</h1>
             <div>Raheem</div>
             <br>
-            <div>Updates To The Site Will be Placed Here</div><br>
-            <div>ChangeLog: 0.9.2<br>
-            PWA Installed And Running<br>
-            Feed Page Name Changed To Posts <br>
-            Added News Page <br>
-            Fixed Bugs  <br>
-            Added University Options <br>
+            <div>From July 12th 2022 <br> This Application Will No Longer Be Updated <br> Final Release Changes Are Stated Below</div>
+            <br>
+            <div>ChangeLog: 1.0.0 <br>
+            PWA Disabled and Removed<br>
+            Bugs Squashed <br>
+            Final Release <br>
+            News API Stopped<br>
             </div>
             <br>
             </div>
