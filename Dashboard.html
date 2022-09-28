@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
         integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <!-- <script defer src="https://progressier.com/client/script.js?id=oAfWiCUiIs83YxdUKyoN"></script>  -->
+    <!-- <script defer src="https://progressier.com/client/script.js?id=oAfWiCUiIs83YxdUKyoN"></script>  -->
     <title>Dashboard</title>
 </head>
 
@@ -78,9 +78,9 @@
             </div>
 
             <div class="bottom-content">
-            
 
-                <li class=""  title="Bug Support">
+
+                <li class="" title="Bug Support">
                     <a class="" href="mailto:Raheemshah2809@gmail.com?subject=Bug Found">
                         <i class='bx bx-bug icon'></i>
                         <span class="text nav-text">Bug Support</span>
@@ -151,14 +151,15 @@
         </div>
         <br>
         <br>
-        
+
         <div class="onoffswitch3">
             <input type="checkbox" name="onoffswitch3" class="onoffswitch3-checkbox" id="myonoffswitch3" checked>
             <label class="onoffswitch3-label" for="myonoffswitch3">
                 <span class="onoffswitch3-inner">
                     <span class="onoffswitch3-active">
                         <marquee class="scroll-text">
-                            Current Release 1.1.0 -- This Application Will Be Maintained Slowly -- Contact Support For Breaking Bugs Found --
+                            Current Release 1.1.0 -- This Application Will Be Maintained Slowly -- Contact Support For
+                            Breaking Bugs Found --
                             Click Bug Support Icon On The Right To Send A Report -- Read ChangeLog For More Information.
                             <br>
                         </marquee>
@@ -181,8 +182,7 @@
                             Android And IOS Apps Are Coming Soon. -- News API Being Worked On.
                         </marquee>
                         <br>
-                        <span class="onoffswitch3-switch">Notices<span
-                                class="glyphicon glyphicon-remove"></span></span>
+                        <span class="onoffswitch3-switch">Notices<span class="glyphicon glyphicon-remove"></span></span>
                     </span>
                     <span class="onoffswitch3-inactive"><span class="onoffswitch3-switch">SHOW App
                             NEWS</span></span>
@@ -191,7 +191,11 @@
         </div>
         <!-- <button class="progressier-subscribe-button" data-icons="true" data-eligible="Get notifications ?" data-subscribed="Subscribed to Notifications" data-blocked="Notifications blocked" style="right: -30px;position: relative;"></button> -->
     </section>
+    <script type="module">
+        import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
 
+        const el = document.createElement('pwa-update');
+        document.body.appendChild(el);</script>
     <script src="js/firebase-app-compat.js"></script>
     <script src="js/firebase-storage-compat.js"></script>
     <script src="js/firebase-analytics-compat.js"></script>
