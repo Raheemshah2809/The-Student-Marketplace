@@ -1,39 +1,39 @@
-const alert = (function(){
+const alert = (function () {
 
     const Alert = () => {
-        
+
         const alertType = {
             success: 'alert-success',
             warning: 'alert-warning',
         }
 
         let alertBox = document.getElementById('alert-box');
-        if(!alertBox) {
+        if (!alertBox) {
             const parent = document.createElement('div');
             parent.id = "alert-box";
             parent.classList.add('alert', 'hide', alertType.warning);
-            
+
             const exclamation = document.createElement('span');
             exclamation.classList.add('fas', 'fa-exclamation-circle');
-    
+
             const msg = document.createElement('span');
             msg.classList.add('msg');
             msg.innerHTML = 'Warning: This is a warning alert!';
-            
-    
+
+
             const closeSpan = document.createElement('span');
             closeSpan.classList.add('fas', 'fa-times');
-    
+
             const closeBtn = document.createElement('div');
             closeBtn.classList.add('close-btn');
             closeBtn.appendChild(closeSpan);
             closeBtn.addEventListener('click', () => {
                 parent.classList.add('hide');
             });
-    
+
             parent.append(exclamation, msg, closeBtn);
 
-            
+
             document.body.appendChild(parent);
             alertBox = parent;
         } else {
@@ -49,27 +49,27 @@ const alert = (function(){
             alertBox.classList.remove('hide');
             alertBox.classList.add('show');
         }
-    
+
         const hide = () => {
             alertBox.classList.remove('show');
             alertBox.classList.add('hide');
         }
-        
+
         const removeClass = (className) => {
-            if(alertBox.classList.contains(className)) {
+            if (alertBox.classList.contains(className)) {
                 alertBox.classList.remove(className);
             }
         }
 
         const addClass = (className) => {
-            if(!alertBox.classList.contains(className)) {
+            if (!alertBox.classList.contains(className)) {
                 alertBox.classList.add(className);
             }
         }
 
         const success = (msg) => {
             removeClass(alertType.warning);
-            addClass(alertType.success);   
+            addClass(alertType.success);
             setMessage(msg);
         }
 
@@ -84,21 +84,21 @@ const alert = (function(){
         }
 
         const setMessage = (msg) => {
-        
+
             hide();
-            
-            if(msgSpan) {
+
+            if (msgSpan) {
                 msgSpan.innerHTML = msg;
 
                 show();
-            //     const timeout = setTimeout(() => {
-            //         hide();
-            //         clearTimeout(timeout);
-            //     }, (1000 * 5));
-            // }
+                //     const timeout = setTimeout(() => {
+                //         hide();
+                //         clearTimeout(timeout);
+                //     }, (1000 * 5));
+                // }
             }
         }
-        
+
         const onClose = (callback) => {
             const closeButton = alertBox.querySelector('.close-btn');
             closeButton.addEventListener('click', () => {
@@ -119,4 +119,17 @@ const alert = (function(){
 
     return Alert();
 })();
-    
+
+function validateFileType() {
+    var fileName = document.getElementById("chooseFile").value;
+    var idxDot = fileName.lastIndexOf(".") + 1;
+    var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+    if (extFile == "jpg" || extFile == "jpeg" || extFile == "png") {
+        document.getElementById("upload2").disabled = false;
+
+    } else {
+        alert.warning('Incorrect file type. Please upload a jpg, jpeg or png file.');
+        document.getElementById("upload2").disabled = true;
+    }
+
+}

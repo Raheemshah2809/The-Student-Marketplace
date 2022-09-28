@@ -9,16 +9,24 @@ if (!modal) {
     _modal.innerHTML = `<div class="modal-overlay"></div>
         <div class="modal-content">
             <a href="#" title="Close" class="modal-close">Close</a>
-            <h1>Created By:</h1>
-            <div>Raheem</div>
+            <h1>ChangeLog<br>Oct 2022 Release</h1>
+            <h4>Created By:</h4>
+            <div>Raheem Shah</div>
             <br>
-            <div>From July 12th 2022 <br> This Application Will No Longer Be Updated <br> Final Release Changes Are Stated Below</div>
+            <h5>Supported By:</h5>
+            <div>Fluorescent Ideas</div>
             <br>
-            <div>ChangeLog: 1.0.0 <br>
-            PWA Disabled and Removed<br>
-            Bugs Squashed <br>
-            Final Release <br>
-            News API Stopped<br>
+            <div>From September 28th 2022 <br> This Application Will Now Continue To Receive Updates
+            <br> Latest Updates Are Stated Below
+            </div>
+            <br>
+            <div>ChangeLog: 1.1.0 <br>
+            1. Added Image Validation To Stop Users From Uploading Anything Else Apart From Images.<br> 
+            2. Removed Duplicate University List <br>
+            3. PWA Disabled and Removed<br>
+            4. Bugs Squashed <br>
+            5. Final Release <br>
+            6. News API Stopped<br>
             </div>
             <br>
             </div>

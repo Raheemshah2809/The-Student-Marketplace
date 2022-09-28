@@ -32,6 +32,7 @@
     padding: 2em;
     color: var(--text-color);
     background: var(--body-color);
+    text-align: center;
 }
 
 .modal-overlay {

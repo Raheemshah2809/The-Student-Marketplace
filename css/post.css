@@ -99,7 +99,11 @@ body.dark {
     font-weight: 500;
     white-space: nowrap;
     opacity: 1;
+    text-align: center;
 }
+
+
+
 
 .sidebar.close .text {
     opacity: 0;
@@ -928,15 +932,15 @@ form {
 
 
 .alert.alert-warning {
-    border-left-color: #ffa502;
+    border-left-color: #cb0e0e;
 }
 
 .alert.alert-warning :is(.fa-exclamation-circle, .msg, .fas, .fa-times) {
-    color: #ce8500 !important;
+    color: #cb0e0e !important;
 }
 
 .alert.alert-warning .close-btn {
-    background:#ffd080;
+    background: ;
 }
 
 .alert.alert-success {
@@ -948,11 +952,11 @@ form {
 }
 
 .alert.alert-success .close-btn {
-    background:#d4f4d7;
+    background: #d4f4d7;
 }
 
 .alert {
-    padding: 20px 40px;
+    padding: 19px 60px;
     width: 100%;
     position: absolute;
     right: 0;
@@ -989,8 +993,8 @@ form {
 
 @media screen and (min-width: 360px) {
     .alert {
-        width: 72%;
-        top: 90px;
+        width: 75%;
+        top: 111px;
     }
 }
 
@@ -1098,8 +1102,8 @@ form {
 }
 
 .alert .msg {
-    padding: 0 20px;
-    font-size: 18px;
+    padding: 0 0px;
+    font-size: 15px;
     color: transparent;
 }
 
@@ -1114,7 +1118,7 @@ form {
 }
 
 .alert .close-btn:hover {
-    background: #ffc766;
+    background: #cf5b5b;
 }
 
 .alert .close-btn .fas {
@@ -1131,35 +1135,35 @@ form {
     text-align: center;
 }
 
-.form-control{
+.form-control {
     width: 279px;
     height: 103px;
     text-align: center;
 }
 
-.form-control2{
+.form-control2 {
     width: 279px;
     text-align: center;
 }
 
-.price-control{
+.price-control {
     width: 279px;
     height: 20px;
     text-align: center;
 }
 
-.user-email{
-    font-size: 16px;    
+.user-email {
+    font-size: 16px;
 }
 
-.dark .result{
+.dark .result {
     color: var(--text-color)
 }
-.dark .alive1{
+
+.dark .alive1 {
     color: var(--text-color);
 }
 
-.dark .price{
+.dark .price {
     color: var(--text-color);
 }
-
