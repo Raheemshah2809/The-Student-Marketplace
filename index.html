@@ -11,10 +11,10 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-1PLJCMDK6S"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <link rel="stylesheet" href=" https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href=" https://unpkg.com/boxicons@2.1.1/dist/boxicons.js" />
     <!-- <script defer src="https://progressier.com/client/script.js?id=oAfWiCUiIs83YxdUKyoN"></script>  -->
-
+    <link rel="manifest" href="manifest.json">
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -23,7 +23,12 @@
         }
         gtag('js', new Date());
 
-        gtag('config', 'G-1PLJCMDK6S');
+        gtag('config', 'G-1PLJCMDK6S'); <
+        script > navigator.serviceWorker.register("pwabuilder-adv-sw.js")
+    </script>
+    <script>
+        navigator.serviceWorker.register("pwabuilder-adv-sw.js")
+    </script>
     </script>
 </head>
 
@@ -62,25 +67,30 @@
             <div class="section__wrapper">
                 <h2 class="type__title">Why This I Made This</h2>
                 <div class="section u-margin-bottom-large">
-                    
+
                     <div class="section__card">
                         <h3 class="section__title"><span class="special">Fair</span></h3>
-                        <p class="section__desc">Prices Are Fair And Affordable To Allow Students To Buy Products Without Breaking The Bank.</p>
+                        <p class="section__desc">Prices Are Fair And Affordable To Allow Students To Buy Products
+                            Without Breaking The Bank.</p>
                         <h3 class="section__price">Safe And Reliable</h3>
                     </div>
 
 
                     <div class="section__card">
                         <h3 class="section__title"><span class="special">Only For University Students</span></h3>
-                        <p class="section__desc">Only Students With A Valid Uni.AC.UK Email Are Allowed To Sign Up, This Is Fair Because It Deters
-                            Away Drop Shippers From Ruining Market Prices To Allow Students To Buy and Sell At A Fair Price. </p>
+                        <p class="section__desc">Only Students With A Valid Uni.AC.UK Email Are Allowed To Sign Up, This
+                            Is Fair Because It Deters
+                            Away Drop Shippers From Ruining Market Prices To Allow Students To Buy and Sell At A Fair
+                            Price. </p>
                         <h3 class="section__price">Valid Email Required To Verify</h3>
                     </div>
 
 
                     <div class="section__card">
                         <h3 class="section__title"><span class="special">Free</span></h3>
-                        <p class="section__desc">Keep All Revenue, Whilst You Study, The Site Will Be Supported By Ads And Membership Fee's Which Unlock More Features To Help You Sell Much Quickly And Around The UK.</p>
+                        <p class="section__desc">Keep All Revenue, Whilst You Study, The Site Will Be Supported By Ads
+                            And Membership Fee's Which Unlock More Features To Help You Sell Much Quickly And Around The
+                            UK.</p>
                         <br>
                         <h3 class="section__price">Membership Feature Coming Soon</h3>
                     </div>
@@ -102,7 +112,8 @@
                         <p class="person">Student From Sussex</p>
                     </div>
                     <div class="slide">
-                        <h2 class="testimonial">I Like Student Marketplace More and More Each Day Because It Makes My Life A Lot Easier</h2>
+                        <h2 class="testimonial">I Like Student Marketplace More and More Each Day Because It Makes My
+                            Life A Lot Easier</h2>
                         <p class="person">Student From BCU</p>
                     </div>
                 </div>
@@ -125,10 +136,11 @@
                     </div>
                     <!-- Telephone -->
                     <div class="box">
-                            <a href="mailto:#">
+                        <a href="mailto:#">
                             <h3 class="box__title">Found a Bug?</h3>
                             <i class="fas fa-bug fa-4x icon"></i>
-                            <p class="box__link">Email Us A Screenshot and Description Of The Bug, And I'll Attempt To Fix It ASAP.</p>
+                            <p class="box__link">Email Us A Screenshot and Description Of The Bug, And I'll Attempt To
+                                Fix It ASAP.</p>
                         </a>
                     </div>
 
@@ -183,7 +195,9 @@
             </div>
         </div>
     </footer>
-
+    <script>
+        navigator.serviceWorker.register("public/sw.js")
+    </script>
     <script src="js/script.js" async></script>
 </body>
 

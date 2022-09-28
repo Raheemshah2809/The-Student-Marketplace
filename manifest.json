@@ -1,10 +1,10 @@
 {
-"name": "The-Student-MarketPlace",
+"name": "The Student MarketPlace",
 "short_name": "TSM",
 "start_url": "https://thestudentmarketplace.netlify.app/dashboard",
 "display": "standalone",
-"description": "Buy and Sell Goods",
-"lang": "eng",
+"description": "Buy and sell goods and services with other students",
+"lang": "en",
 "dir": "auto",
 "theme_color": "#000000",
 "background_color": "#000000",
