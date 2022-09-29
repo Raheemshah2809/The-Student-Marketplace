@@ -12,6 +12,7 @@ if (!modal) {
             <h1>ChangeLog<br>Oct 2022 Release</h1>
             <h4>Created By:</h4>
             <div>Raheem Shah</div>
+            <div>Amal Habib (US Dickhead)</div>
             <br>
             <h5>Supported By:</h5>
             <div>Fluorescent Ideas</div>
