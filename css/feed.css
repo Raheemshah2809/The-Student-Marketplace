@@ -271,7 +271,7 @@ body.dark .mode .sun-moon i.moon {
     position: absolute;
     right: 0;
     height: 100%;
-    min-width: 60px;
+    min-width: 52px;
     display: flex;
     align-items: center;
     justify-content: center;
