@@ -1,5 +1,8 @@
 https://thestudentmarketplace.netlify.app/
 
+### **As of Sepetember 2022 - 1.1.0 Is out Now (Change Log Coming Soon!)**
+
+
 
 This is my dissertation for The Student Marketplace Website, this is where the code is being held and sourced, a database will be connected via Brighton domains
 
