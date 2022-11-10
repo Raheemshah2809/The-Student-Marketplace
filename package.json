@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Raheemshah2809/The-Student-Marketplace#readme",
   "devDependencies": {
-    "electron": "^17.2.0"
+    "electron": "^18.3.7"
   },
   "dependencies": {
     "workbox-precaching": "^6.5.4"
